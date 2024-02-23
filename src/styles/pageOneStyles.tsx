@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ButtonHTMLAttributes } from 'react'
 
 export const Container = styled.div`
     display: flex;
@@ -6,7 +7,6 @@ export const Container = styled.div`
     align-items: center;
     margin: 0 20px;
 `
-
 export const Header = styled.header`
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
@@ -15,7 +15,6 @@ export const Header = styled.header`
     text-align: center;
     color: #21d63e;
 `
-
 export const Title = styled.h1`
     font-family: 'Nunito Sans', sans-serif;
     font-weight: 700;
@@ -24,7 +23,6 @@ export const Title = styled.h1`
     text-align: center;
     color: black;
 `
-
 // export const ButtonContainer = styled.div`
 //     max-width: 500px;
 //     margin: 0 auto;
@@ -32,8 +30,7 @@ export const Title = styled.h1`
 //     padding: 16px, 112px, 16px, 112px;
 //     gap: 10px;
 // `
-
-export const ButtonYes = styled.button`
+export const ButtonYes = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
     padding: 16px, 112px;
     width: 246px;
     height: 42px;
@@ -45,8 +42,7 @@ export const ButtonYes = styled.button`
     cursor: pointer;
     margin: 10px;
 `
-
-export const ButtonNo = styled.button`
+export const ButtonNo = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
     padding: 16px, 112px;
     width: 246px;
     height: 42px;
