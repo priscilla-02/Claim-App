@@ -7,9 +7,9 @@ import {
     Navigate,
 } from 'react-router-dom'
 import { routes as appRoutes } from './routes'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import NotFound from './pages/NotFound'
+import Navbar from './components/NavBar/Navbar'
+import Footer from './components/Footer/Footer'
+import NotFound from './pages/Not Found/NotFound'
 
 export function App() {
     // define theme

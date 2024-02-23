@@ -129,7 +129,6 @@
 &nbsp;
 // pages
 import Home from "./pages/Home";
-import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 &nbsp;
 import { IRoute } from './interfaces'
@@ -141,13 +140,6 @@ export const routes: Array&lt;IRoute&gt; = [
         path: '/',
         enabled: true,
         component: Home
-    },
-    {
-        key: 'about-route',
-        title: 'About',
-        path: '/about',
-        enabled: true,
-        component: About
     },
     {
         key: 'not-found-route',

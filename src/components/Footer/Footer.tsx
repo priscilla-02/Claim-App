@@ -11,9 +11,14 @@ import {
     LogoBox,
     BottomTextBox,
     MainLogo,
-} from '../styles/footerStyle'
-import { FooterArray } from '../utils/constants'
-import { Expert, ExpertLogo, TextBox, TickIcon } from '../styles/globalStyles'
+} from './footerStyle'
+import { FooterArray } from '../../utils/constants'
+import {
+    Expert,
+    ExpertLogo,
+    TextBox,
+    TickIcon,
+} from '../../styles/globalStyles'
 
 export const Footer: FC = (): ReactElement => {
     return (

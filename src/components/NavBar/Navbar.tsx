@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from 'react'
-import { Expert, ExpertLogo, TextBox } from '../styles/globalStyles'
+import { Expert, ExpertLogo, TextBox } from '../../styles/globalStyles'
 import {
     Container,
     ExpertText,
@@ -7,7 +7,7 @@ import {
     LineThrough,
     RightLogosBox,
     SecureLogBox,
-} from '../styles/navBarStyle'
+} from './navBarStyle'
 // import {
 //     Box,
 //     Link,

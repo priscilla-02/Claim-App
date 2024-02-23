@@ -1,12 +1,12 @@
-import { ContinueButton } from '../styles/globalStyles'
+import { ContinueButton } from '../../styles/globalStyles'
 import {
     CircleSelection,
     Header,
     Selections,
     SelectionsContainer,
     Title,
-} from '../styles/pageTwoStyles'
-import { BanksAndLenderArray } from '../utils/constants'
+} from './PageTwoStyles'
+import { BanksAndLenderArray } from '../../utils/constants'
 
 function PageTwo() {
     return (

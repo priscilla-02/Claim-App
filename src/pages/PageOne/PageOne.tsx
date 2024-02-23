@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { setCreditUse } from '../reducer/UserSlice'
+import { setCreditUse } from '../../reducer/UserSlice'
 
-import {
-    Container,
-    Header,
-    Title,
-    ButtonYes,
-    ButtonNo,
-} from '../styles/pageOneStyles'
+import { Container, Header, Title, ButtonYes, ButtonNo } from './PageOneStyles'
 
 function PageOne() {
     const dispatch = useDispatch()
