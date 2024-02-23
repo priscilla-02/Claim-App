@@ -33,7 +33,7 @@ export const Footer: FC = (): ReactElement => {
                 <LogoBox>
                     <ExpertLogo>
                         <TickIcon>
-                            <img src="/footer-tick.svg" alt="Tick Icon" />
+                            <img src="/global-tick.svg" alt="Tick Icon" />
                         </TickIcon>
                         <TextBox>
                             <Expert>Expert</Expert>
