@@ -1,24 +1,33 @@
 // src/routes.ts
 
 // pages
-import Home from "./pages/Home";
-import About from "./pages/About";
 
 import { IRoute } from './interfaces'
+import About from './pages/About'
+
+import PageOne from './pages/PageOne'
+import PageTwo from './pages/PageTwo'
 
 export const routes: Array<IRoute> = [
     {
-        key: 'home-route',
-        title: 'Home',
-        path: '/',
+        key: 'page-1-route',
+        title: 'Page1',
+        path: '/page/1',
         enabled: true,
-        component: Home
+        component: PageOne,
+    },
+    {
+        key: 'page-2-route',
+        title: 'Page2',
+        path: '/page/2',
+        enabled: true,
+        component: PageTwo,
     },
     {
         key: 'about-route',
         title: 'About',
         path: '/about',
         enabled: true,
-        component: About
-    }
+        component: About,
+    },
 ]
