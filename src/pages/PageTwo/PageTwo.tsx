@@ -13,8 +13,7 @@ import { BanksAndLenderArray } from '../../utils/constants'
 
 function PageTwo() {
     const [lenderArray, setLenderArray] = useState<string[]>([])
-
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const bankUseSelection = (lender: string) => {
         if (lenderArray.includes(lender)) {
@@ -23,18 +22,13 @@ function PageTwo() {
             )
             setLenderArray(filteredArray)
         } else {
-            lenderArray.push(lender)
-            setLenderArray(lenderArray)
+            setLenderArray([...lenderArray, lender])
         }
-        console.log('lenderArray3', lenderArray)
-
-        // dispatch(setBankUsed(selectedLendersArray))
     }
 
-    // const handleOptionsSelect = (lender: string) => {
-    //     setLenderSelect((prev) => !prev)
-
-    // }
+    const handleBankUseSubmit = () => {
+        dispatch(setBankUsed(lenderArray))
+    }
 
     return (
         <>
@@ -48,14 +42,18 @@ function PageTwo() {
                     <Selections
                         key={lender}
                         onClick={() => bankUseSelection(lender)}
-                        // colorChange={lenderArray.includes(lender)}
+                        colorChange={lenderArray.includes(lender)}
                     >
-                        <CircleSelection></CircleSelection>
+                        <CircleSelection
+                            colorChange={lenderArray.includes(lender)}
+                        ></CircleSelection>
                         {lender}
                     </Selections>
                 ))}
             </SelectionsContainer>
-            <ContinueButton>Continue</ContinueButton>
+            <ContinueButton onClick={() => handleBankUseSubmit()}>
+                Continue
+            </ContinueButton>
         </>
     )
 }
