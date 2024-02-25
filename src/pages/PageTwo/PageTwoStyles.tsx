@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ButtonHTMLAttributes } from 'react'
 
 export const Header = styled.header`
     font-family: 'Nunito Sans', sans-serif;
@@ -23,14 +24,16 @@ export const SelectionsContainer = styled.div`
     align-items: center;
 `
 
-export const Selections = styled.button`
+export const Selections = styled.button<
+    ButtonHTMLAttributes<HTMLButtonElement>
+>`
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     font-weight: 600;
     padding: 16px, 112px;
     width: 450px;
     height: 50px;
-    color: black;
+    color: ${(props) => (props.colorChange ? '#21d63e' : 'black')};
     border: 1px solid #172c3b;
     border-radius: 25px;
     cursor: pointer;

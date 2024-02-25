@@ -7,7 +7,7 @@ import { Container, Header, Title, ButtonYes, ButtonNo } from './PageOneStyles'
 function PageOne() {
     const dispatch = useDispatch()
 
-    const creditUseFunction = (creditUsedBol: boolean) => {
+    const creditUseSelection = (creditUsedBol: boolean) => {
         dispatch(setCreditUse(creditUsedBol))
     }
 
@@ -18,11 +18,11 @@ function PageOne() {
                 Have you had a credit card, loan or mortgage in the past?
             </Title>
             <Link to="/page/2">
-                <ButtonYes onClick={() => creditUseFunction(true)}>
+                <ButtonYes onClick={() => creditUseSelection(true)}>
                     Yes
                 </ButtonYes>
             </Link>
-            <ButtonNo onClick={() => creditUseFunction(false)}>No</ButtonNo>
+            <ButtonNo onClick={() => creditUseSelection(false)}>No</ButtonNo>
         </Container>
     )
 }
