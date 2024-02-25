@@ -21,6 +21,23 @@ export const Expert = styled.h1`
 
 export const TickIcon = styled.div``
 
+export const Header = styled.header`
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21.82px;
+    text-align: center;
+    color: #21d63e;
+`
+export const Title = styled.h1`
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27.28px;
+    text-align: center;
+    color: black;
+`
+
 export const ContinueButton = styled.button`
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;

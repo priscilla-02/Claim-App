@@ -1,13 +1,12 @@
+import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setBankUsed } from '../../reducer/UserSlice'
 import { useState } from 'react'
-import { ContinueButton } from '../../styles/globalStyles'
+import { ContinueButton, Header, Title } from '../../styles/globalStyles'
 import {
     CircleSelection,
-    Header,
     Selections,
     SelectionsContainer,
-    Title,
 } from './PageTwoStyles'
 import { BanksAndLenderArray } from '../../utils/constants'
 
@@ -51,9 +50,11 @@ function PageTwo() {
                     </Selections>
                 ))}
             </SelectionsContainer>
-            <ContinueButton onClick={() => handleBankUseSubmit()}>
-                Continue
-            </ContinueButton>
+            <Link to="/page/3">
+                <ContinueButton onClick={() => handleBankUseSubmit()}>
+                    Continue
+                </ContinueButton>
+            </Link>
         </>
     )
 }
