@@ -1,11 +1,8 @@
-// src/routes.ts
-
-// pages
-
 import { IRoute } from './interfaces'
 
 import PageOne from './pages/PageOne/PageOne'
 import PageTwo from './pages/PageTwo/PageTwo'
+import PageThree from './pages/PageThree/PageThree'
 
 export const routes: Array<IRoute> = [
     {
@@ -21,5 +18,12 @@ export const routes: Array<IRoute> = [
         path: '/page/2',
         enabled: true,
         component: PageTwo,
+    },
+    {
+        key: 'page-3-route',
+        title: 'Page3',
+        path: '/page/3',
+        enabled: true,
+        component: PageThree,
     },
 ]
