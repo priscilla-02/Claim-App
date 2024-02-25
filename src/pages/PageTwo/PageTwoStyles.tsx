@@ -1,5 +1,4 @@
 import styled, { ThemedStyledProps } from 'styled-components'
-import { ButtonHTMLAttributes } from 'react'
 
 export const Header = styled.header`
     font-family: 'Nunito Sans', sans-serif;
@@ -27,7 +26,7 @@ export const SelectionsContainer = styled.div`
 export const Selections = styled.div<
     ThemedStyledProps<
         {
-            colorChange: boolean
+            colourChange: boolean
         },
         any
     >
@@ -38,7 +37,7 @@ export const Selections = styled.div<
     padding: 16px, 112px;
     width: 450px;
     height: 50px;
-    color: ${(props) => (props.colorChange ? '#21d63e' : 'black')};
+    color: ${(props) => (props.colourChange ? '#21d63e' : 'black')};
     border: 1px solid #172c3b;
     border-radius: 25px;
     cursor: pointer;
@@ -50,7 +49,7 @@ export const Selections = styled.div<
 export const CircleSelection = styled.div<
     ThemedStyledProps<
         {
-            colorChange: boolean
+            colourChange: boolean
         },
         any
     >
@@ -58,7 +57,7 @@ export const CircleSelection = styled.div<
     width: 20px;
     height: 20px;
     // border: 2px solid #172c3b;
-    border: 2px solid ${(props) => (props.colorChange ? '#21d63e' : '#172c3b')};
+    border: 2px solid ${(props) => (props.colourChange ? '#21d63e' : '#172c3b')};
     border-radius: 50%;
     margin-right: 8px;
     cursor: pointer;

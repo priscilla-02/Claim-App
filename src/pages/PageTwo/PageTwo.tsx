@@ -42,10 +42,10 @@ function PageTwo() {
                     <Selections
                         key={lender}
                         onClick={() => bankUseSelection(lender)}
-                        colorChange={lenderArray.includes(lender)}
+                        colourChange={lenderArray.includes(lender)}
                     >
                         <CircleSelection
-                            colorChange={lenderArray.includes(lender)}
+                            colourChange={lenderArray.includes(lender)}
                         ></CircleSelection>
                         {lender}
                     </Selections>

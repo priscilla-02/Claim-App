@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { ThemedStyledProps } from 'styled-components'
 import { ButtonHTMLAttributes } from 'react'
 
 export const Container = styled.div`
@@ -23,31 +23,18 @@ export const Title = styled.h1`
     text-align: center;
     color: black;
 `
-// export const ButtonContainer = styled.div`
-//     max-width: 500px;
-//     margin: 0 auto;
-//     border: 1px;
-//     padding: 16px, 112px, 16px, 112px;
-//     gap: 10px;
-// `
-export const ButtonYes = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
+
+export const Button = styled.button<
+    ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any> & {
+        colour: boolean
+    }
+>`
     padding: 16px, 112px;
     width: 246px;
     height: 42px;
     font-size: 16px;
-    background-color: #21d63e;
-    color: w#FFFFFF;
-    border: 1px solid #172c3b;
-    border-radius: 25px;
-    cursor: pointer;
-    margin: 10px;
-`
-export const ButtonNo = styled.button<ButtonHTMLAttributes<HTMLButtonElement>>`
-    padding: 16px, 112px;
-    width: 246px;
-    height: 42px;
-    font-size: 16px;
-    color: black;
+    background-color: ${(props) => (props.colour ? '#21d63e' : '')};
+    color: ${(props) => (props.colour ? '#ffffff' : 'black')};
     border: 1px solid #172c3b;
     border-radius: 25px;
     cursor: pointer;
