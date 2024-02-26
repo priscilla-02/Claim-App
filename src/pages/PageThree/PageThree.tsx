@@ -1,13 +1,13 @@
+import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-// import { RootState } from '../../store'
 import { IAddress, setAddress } from '../../reducer/UserSlice'
 import { ContinueButton, Header, Title } from '../../styles/globalStyles'
 import { MessageConatiner, PostCodeConatiner } from './PageThreeStyles'
 import { FullAddressDetails } from '../../utils/constants'
+import { open, close } from '../../reducer/PopupSlice'
 
 function PageThree() {
-    // const [postcode, setPostcode] = useState<string>('')
     const [addressState, setAddressState] = useState<IAddress>({
         addressLine1: '',
         addressLine2: '',
@@ -18,7 +18,7 @@ function PageThree() {
     })
     const [clickSearch, setClickSearch] = useState<boolean>(false)
     const dispatch = useDispatch()
-    // const addressStoreState = useSelector((state: RootState) => state.address)
+    const navigate = useNavigate()
 
     useEffect(() => {}, [clickSearch])
 
@@ -40,14 +40,19 @@ function PageThree() {
             addressState.country !== '' &&
             addressState.postcode !== ''
         ) {
+            dispatch(close())
             dispatch(setAddress(addressState))
+            navigate('/page/4')
+        } else {
+            dispatch(open({ text: 'Missing Field', type: 'error' }))
         }
     }
 
     const handleSearchPostCode = () => {
         if (addressState.postcode === '' || !addressState.postcode) {
-            dispatch(open({ text: 'text', type: 'error' }))
+            dispatch(open({ text: 'Missing Postcode', type: 'error' }))
         } else {
+            dispatch(close())
             setClickSearch(true)
         }
     }
@@ -83,6 +88,7 @@ function PageThree() {
                             />
                         </div>
                     ))}
+
                     <ContinueButton onClick={() => handleFullAddressSumbit()}>
                         Continue
                     </ContinueButton>

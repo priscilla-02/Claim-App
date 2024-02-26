@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 
 export interface PopupState {
-    open: boolean
+    open?: boolean
     text: string
     type: 'error' | 'success'
 }
