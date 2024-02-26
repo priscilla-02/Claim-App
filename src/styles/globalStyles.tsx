@@ -1,6 +1,15 @@
 import styled, { ThemedStyledProps } from 'styled-components'
 import { ButtonHTMLAttributes } from 'react'
 
+interface InputBoxProps {
+    type: string
+    id: string
+    name: string
+    placeholder: string
+    value: string
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+
 export const ExpertLogo = styled.div`
     display: flex;
     align-items: center;
@@ -38,12 +47,31 @@ export const Title = styled.h1`
     text-align: center;
     color: black;
 `
+
+export const InputLabel = styled.input<InputBoxProps>`
+    border: 0.6px solid #254358;
+    width: 300px;
+    height: 35px;
+    margin: 16px;
+    border-radius: 10px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.1px;
+`
+
 export const ContinueButton = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any>
 >`
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     font-weight: 700;
+    line-height: 19.1px;
     padding: 16px, 112px;
     width: 70%;
     height: 60px;

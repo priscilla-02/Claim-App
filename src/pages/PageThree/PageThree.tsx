@@ -1,9 +1,20 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { IAddress, setAddress } from '../../reducer/UserSlice'
-import { ContinueButton, Header, Title } from '../../styles/globalStyles'
-import { MessageConatiner, PostCodeConatiner } from './PageThreeStyles'
+import {
+    ContinueButton,
+    Header,
+    InputLabel,
+    Title,
+} from '../../styles/globalStyles'
+import {
+    MessageConatiner,
+    PostCodeConatiner,
+    InputContainer,
+    PostcodeLabel,
+    SearchButton,
+} from './PageThreeStyles'
 import { FullAddressDetails } from '../../utils/constants'
 import { open, close } from '../../reducer/PopupSlice'
 
@@ -66,10 +77,10 @@ function PageThree() {
                 <h2>We need this information for anti-fraud purposes.</h2>
             </MessageConatiner>
             {addressState.postcode !== '' && clickSearch ? (
-                <div>
+                <InputContainer>
                     {FullAddressDetails.map((line: string, index: number) => (
                         <div key={index}>
-                            <input
+                            <InputLabel
                                 type="text"
                                 id={line}
                                 name={line}
@@ -85,17 +96,16 @@ function PageThree() {
                                         [line]: e.target.value,
                                     })
                                 }
-                            />
+                            ></InputLabel>
                         </div>
                     ))}
-
                     <ContinueButton onClick={() => handleFullAddressSumbit()}>
                         Continue
                     </ContinueButton>
-                </div>
+                </InputContainer>
             ) : (
                 <PostCodeConatiner>
-                    <input
+                    <PostcodeLabel
                         type="text"
                         id="postcode"
                         name="postcode"
@@ -106,11 +116,12 @@ function PageThree() {
                                 postcode: e.target.value,
                             })
                         }
-                    />
-                    <button onClick={handleSearchPostCode}>Search</button>
+                    ></PostcodeLabel>
+                    <SearchButton onClick={handleSearchPostCode}>
+                        Search
+                    </SearchButton>
                 </PostCodeConatiner>
             )}
-            <div></div>
         </>
     )
 }
