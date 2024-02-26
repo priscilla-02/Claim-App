@@ -18,13 +18,14 @@ interface IUserinfo {
     dob: string
 }
 
-interface IAddress {
+export interface IAddress {
     addressLine1: string
     addressLine2: string
     townOrCity: string
-    country1: string
-    country2: string
+    county: string
+    country: string
     postcode: string
+    [key: string]: string
 }
 
 export const initialState: UserSubmissionState = {
@@ -34,8 +35,8 @@ export const initialState: UserSubmissionState = {
         addressLine1: '',
         addressLine2: '',
         townOrCity: '',
-        country1: '',
-        country2: '',
+        county: '',
+        country: '',
         postcode: '',
     },
     userInfo: {

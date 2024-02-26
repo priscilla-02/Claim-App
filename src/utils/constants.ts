@@ -32,3 +32,12 @@ export const BanksAndLenderArray: string[] = [
     'Argos',
     'The Co-Operative Bank',
 ]
+
+export const FullAddressDetails: string[] = [
+    'addressLine1',
+    'addressLine2',
+    'townOrCity',
+    'county',
+    'country',
+    'postcode',
+]

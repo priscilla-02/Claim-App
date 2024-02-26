@@ -10,6 +10,7 @@ import { routes as appRoutes } from './routes'
 import Navbar from './components/NavBar/Navbar'
 import Footer from './components/Footer/Footer'
 import NotFound from './pages/Not Found/NotFound'
+import Popup from './components/Popup'
 
 export function App() {
     // define theme
@@ -36,6 +37,7 @@ export function App() {
             {/* <GlobalStyles /> */}
             <Box height="100vh" display="flex" flexDirection="column">
                 <Router>
+                    <Popup />
                     <Navbar />
                     <Paper
                         elevation={3}
