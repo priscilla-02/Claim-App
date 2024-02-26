@@ -1,4 +1,5 @@
 import styled, { ThemedStyledProps } from 'styled-components'
+import { ButtonHTMLAttributes } from 'react'
 
 export const SelectionsContainer = styled.div`
     display: flex;
@@ -6,13 +7,10 @@ export const SelectionsContainer = styled.div`
     align-items: center;
 `
 
-export const Selections = styled.div<
-    ThemedStyledProps<
-        {
-            colourChange: boolean
-        },
-        any
-    >
+export const Selections = styled.button<
+    ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any> & {
+        colourChange: boolean
+    }
 >`
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;

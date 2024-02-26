@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled, { ThemedStyledProps } from 'styled-components'
+import { ButtonHTMLAttributes } from 'react'
 
 export const ExpertLogo = styled.div`
     display: flex;
@@ -37,8 +38,9 @@ export const Title = styled.h1`
     text-align: center;
     color: black;
 `
-
-export const ContinueButton = styled.button`
+export const ContinueButton = styled.button<
+    ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any>
+>`
     font-family: 'Nunito Sans', sans-serif;
     font-size: 14px;
     font-weight: 700;

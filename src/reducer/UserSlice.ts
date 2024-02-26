@@ -27,7 +27,7 @@ interface IAddress {
     postcode: string
 }
 
-const initialState: UserSubmissionState = {
+export const initialState: UserSubmissionState = {
     creditUse: false,
     bankUsed: [],
     address: {
