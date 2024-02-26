@@ -3,6 +3,7 @@ import { IRoute } from './interfaces'
 import PageOne from './pages/PageOne/PageOne'
 import PageTwo from './pages/PageTwo/PageTwo'
 import PageThree from './pages/PageThree/PageThree'
+import PageFour from './pages/PageFour/PageFour'
 
 export const routes: Array<IRoute> = [
     {
@@ -25,5 +26,12 @@ export const routes: Array<IRoute> = [
         path: '/page/3',
         enabled: true,
         component: PageThree,
+    },
+    {
+        key: 'page-4-route',
+        title: 'Page4',
+        path: '/page/4',
+        enabled: true,
+        component: PageFour,
     },
 ]
