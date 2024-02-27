@@ -5,6 +5,11 @@ import PageTwo from './pages/PageTwo/PageTwo'
 import PageThree from './pages/PageThree/PageThree'
 import PageFour from './pages/PageFour/PageFour'
 import PageFive from './pages/PageFive/PageFive'
+import PageSix from './pages/PageSix/PageSix'
+import PageSeven from './pages/PageSeven/PageSeven'
+import PageEight from './pages/PageEight/PageEight'
+import PageComplete from './pages/PageComplete/PageComplete'
+import PageSorry from './pages/PageSorry/PageSorry'
 
 export const routes: Array<IRoute> = [
     {
@@ -41,5 +46,40 @@ export const routes: Array<IRoute> = [
         path: '/page/5',
         enabled: true,
         component: PageFive,
+    },
+    {
+        key: 'page-6-route',
+        title: 'Page6',
+        path: '/page/6',
+        enabled: true,
+        component: PageSix,
+    },
+    {
+        key: 'page-7-route',
+        title: 'Page7',
+        path: '/page/7',
+        enabled: true,
+        component: PageSeven,
+    },
+    {
+        key: 'page-8-route',
+        title: 'Page8',
+        path: '/page/8',
+        enabled: true,
+        component: PageEight,
+    },
+    {
+        key: 'page-complete-route',
+        title: 'PageComplete',
+        path: '/page/complete',
+        enabled: true,
+        component: PageComplete,
+    },
+    {
+        key: 'page-sorry-route',
+        title: 'PageSorry',
+        path: '/page/sorry',
+        enabled: true,
+        component: PageSorry,
     },
 ]

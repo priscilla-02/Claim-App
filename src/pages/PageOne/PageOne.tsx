@@ -23,9 +23,14 @@ function PageOne() {
                     Yes
                 </Button>
             </Link>
-            <Button colour={false} onClick={() => creditUseSelection(false)}>
-                No
-            </Button>
+            <Link to="/page/sorry">
+                <Button
+                    colour={false}
+                    onClick={() => creditUseSelection(false)}
+                >
+                    No
+                </Button>
+            </Link>
         </Container>
     )
 }
