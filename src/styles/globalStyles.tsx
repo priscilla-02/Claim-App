@@ -67,6 +67,23 @@ export const InputBox = styled.input<InputBoxProps>`
     font-weight: 400;
     line-height: 19.1px;
 `
+
+export const MessageInfoContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const MessageInfoText = styled.h1`
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #172c3b;
+    letter-spacing: 0em;
+    text-align: left;
+`
+
 export const ContinueButton = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any>
 >`
@@ -74,13 +91,13 @@ export const ContinueButton = styled.button<
     font-size: 14px;
     font-weight: 700;
     padding: 16px, 112px;
-    width: 70%;
-    height: 60px;
+    width: 283px;
+    height: 42px;
     font-size: 16px;
     background-color: #21d63e;
     color: #ffffff;
     border: 1px solid #172c3b;
-    border-radius: 30px;
+    border-radius: 20px;
     cursor: pointer;
     margin: 10px;
 `

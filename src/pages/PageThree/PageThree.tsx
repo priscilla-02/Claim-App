@@ -7,14 +7,14 @@ import {
     Header,
     InputBox,
     Title,
+    MessageInfoContainer,
+    MessageInfoText,
 } from '../../styles/globalStyles'
 import {
-    MessageConatiner,
     PostCodeConatiner,
     InputContainer,
     PostcodeLabel,
     SearchButton,
-    Text,
 } from './PageThreeStyles'
 import { FullAddressDetails } from '../../utils/constants'
 import { open, close } from '../../reducer/PopupSlice'
@@ -73,10 +73,13 @@ function PageThree() {
         <>
             <Header>That’s great! Now please could you enter this in…</Header>
             <Title>Please enter your postcode in the box below</Title>
-            <MessageConatiner>
+
+            <MessageInfoContainer>
                 <img src="/pageThree-message.svg" alt="Message Icon" />
-                <Text>We need this information for anti-fraud purposes.</Text>
-            </MessageConatiner>
+                <MessageInfoText>
+                    We need this information for anti-fraud purposes.
+                </MessageInfoText>
+            </MessageInfoContainer>
             {addressLocalState.postcode !== '' && clickSearch ? (
                 <InputContainer>
                     {FullAddressDetails.map((line: string, index: number) => (

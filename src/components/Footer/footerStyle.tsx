@@ -15,6 +15,7 @@ export const GuaranteeBox = styled.div`
     flex-direction: column;
     align-items: center;
     color: #172c3b;
+    background-color: #f6f6f6;
 `
 
 export const BenefitDiv = styled.div`

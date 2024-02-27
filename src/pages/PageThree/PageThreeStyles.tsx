@@ -9,21 +9,6 @@ interface InputBoxProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
-export const MessageConatiner = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-`
-
-export const Text = styled.h1`
-    font-family: Nunito Sans;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19.1px;
-    text-align: center;
-    color: #172c3b;
-`
-
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
