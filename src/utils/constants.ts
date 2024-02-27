@@ -41,3 +41,5 @@ export const FullAddressDetails: string[] = [
     'country',
     'postcode',
 ]
+
+export const UserTitleOptions: string[] = ['Mr', 'Mrs', 'Miss', 'Ms']

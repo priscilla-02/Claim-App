@@ -4,6 +4,7 @@ import PageOne from './pages/PageOne/PageOne'
 import PageTwo from './pages/PageTwo/PageTwo'
 import PageThree from './pages/PageThree/PageThree'
 import PageFour from './pages/PageFour/PageFour'
+import PageFive from './pages/PageFive/PageFive'
 
 export const routes: Array<IRoute> = [
     {
@@ -33,5 +34,12 @@ export const routes: Array<IRoute> = [
         path: '/page/4',
         enabled: true,
         component: PageFour,
+    },
+    {
+        key: 'page-5-route',
+        title: 'Page5',
+        path: '/page/5',
+        enabled: true,
+        component: PageFive,
     },
 ]

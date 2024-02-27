@@ -10,12 +10,13 @@ export interface UserSubmissionState {
     phoneNo: string
 }
 
-interface IUserinfo {
+export interface IUserinfo {
     title: string
     firstName: string
     lastName: string
     maidenName: string
     dob: string
+    [key: string]: string
 }
 
 export interface IAddress {
