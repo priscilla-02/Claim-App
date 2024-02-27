@@ -10,7 +10,7 @@ import { routes as appRoutes } from './routes'
 import Navbar from './components/NavBar/Navbar'
 import Footer from './components/Footer/Footer'
 import NotFound from './pages/Not Found/NotFound'
-import Popup from './components/Popup'
+import Popup from './components/Popup/Popup'
 
 export function App() {
     // define theme

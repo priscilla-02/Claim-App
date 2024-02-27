@@ -16,10 +16,10 @@ import { FooterArray } from '../../utils/constants'
 import {
     Expert,
     ExpertLogo,
+    PlevinClaims,
     TextBox,
     TickIcon,
 } from '../../styles/globalStyles'
-
 export const Footer: FC = (): ReactElement => {
     return (
         <Container>
@@ -42,10 +42,9 @@ export const Footer: FC = (): ReactElement => {
                         </TickIcon>
                         <TextBox>
                             <Expert>Expert</Expert>
-                            <h1>PlevinClaims</h1>
+                            <PlevinClaims>PlevinClaims</PlevinClaims>
                         </TextBox>
                     </ExpertLogo>
-
                     <SecureLogo>
                         <div>
                             <img src="/footer-lock.svg" alt="Lock Icon" />
@@ -56,7 +55,6 @@ export const Footer: FC = (): ReactElement => {
                         </SecureTextBox>
                     </SecureLogo>
                 </LogoBox>
-
                 <TopTextBox>
                     <h2>
                         Expert Plevin Claims is a trading name of Veriform
@@ -71,7 +69,6 @@ export const Footer: FC = (): ReactElement => {
                         © Copyright Veriform Limited 2023. All rights reserved.
                     </CopyrightText>
                 </TopTextBox>
-
                 <BottomTextBox>
                     <div>
                         <p>Privacy Policy</p>
@@ -88,5 +85,4 @@ export const Footer: FC = (): ReactElement => {
         </Container>
     )
 }
-
 export default Footer

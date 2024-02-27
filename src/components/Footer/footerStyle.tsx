@@ -44,11 +44,11 @@ export const SecureTextBox = styled.div`
     margin-left: 10px;
     border-bottom: solid 1px #ffffff;
     font-size: 20px;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
 `
 
 export const TopTextBox = styled.div`
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     display: flex;
     flex-direction: column;
     text-align: left;
@@ -59,7 +59,7 @@ export const CopyrightText = styled.h2`
     margin-top: 10px;
 `
 export const BottomTextBox = styled.div`
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     display: flex;
     text-align: left;
     margin: 50px;

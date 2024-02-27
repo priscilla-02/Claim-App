@@ -2,6 +2,7 @@ import styled, { ThemedStyledProps } from 'styled-components'
 import { ButtonHTMLAttributes } from 'react'
 
 interface InputBoxProps {
+    key: any
     type: string
     id: string
     name: string
@@ -22,17 +23,19 @@ export const TextBox = styled.div`
     flex-direction: column;
     margin-left: 10px;
 `
-
 export const Expert = styled.h1`
+    display: flex;
+    text-align: left;
     font-weight: bolder;
-    font-size: 30px;
-    text-align: center;
+    font-size: 25px;
+    height: 35px;
 `
-
+export const PlevinClaims = styled.div`
+    font-size: 14px;
+`
 export const TickIcon = styled.div``
-
 export const Header = styled.header`
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     font-weight: 700;
     font-size: 16px;
     line-height: 21.82px;
@@ -40,7 +43,7 @@ export const Header = styled.header`
     color: #21d63e;
 `
 export const Title = styled.h1`
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     font-weight: 700;
     font-size: 20px;
     line-height: 27.28px;
@@ -48,7 +51,7 @@ export const Title = styled.h1`
     color: black;
 `
 
-export const InputLabel = styled.input<InputBoxProps>`
+export const InputBox = styled.input<InputBoxProps>`
     border: 0.6px solid #254358;
     width: 300px;
     height: 35px;
@@ -59,19 +62,17 @@ export const InputLabel = styled.input<InputBoxProps>`
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 400;
     line-height: 19.1px;
 `
-
 export const ContinueButton = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any>
 >`
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 700;
-    line-height: 19.1px;
     padding: 16px, 112px;
     width: 70%;
     height: 60px;

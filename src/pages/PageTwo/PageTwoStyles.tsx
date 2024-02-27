@@ -12,7 +12,7 @@ export const Selections = styled.button<
         colourChange: boolean
     }
 >`
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 600;
     padding: 16px, 112px;

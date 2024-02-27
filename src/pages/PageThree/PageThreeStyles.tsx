@@ -14,6 +14,16 @@ export const MessageConatiner = styled.div`
     justify-content: center;
     align-items: center;
 `
+
+export const Text = styled.h1`
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.1px;
+    text-align: center;
+    color: #172c3b;
+`
+
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -37,7 +47,7 @@ export const PostcodeLabel = styled.input<InputBoxProps>`
     justify-content: center;
     align-items: center;
     text-align: left;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 400;
     line-height: 19.1px;
@@ -46,7 +56,7 @@ export const SearchButton = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any>
 >`
     border: 1px solid #172c3b;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 700;
     line-height: 19.1px;
@@ -57,4 +67,6 @@ export const SearchButton = styled.button<
     border-radius: 10px;
     color: #ffffff;
     cursor: pointer;
+    padding: 12px, 24px, 12px, 24px;
+    gap: 10px;
 `

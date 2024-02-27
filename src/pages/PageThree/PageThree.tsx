@@ -1,11 +1,11 @@
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { IAddress, setAddress } from '../../reducer/UserSlice'
 import {
     ContinueButton,
     Header,
-    InputLabel,
+    InputBox,
     Title,
 } from '../../styles/globalStyles'
 import {
@@ -14,12 +14,13 @@ import {
     InputContainer,
     PostcodeLabel,
     SearchButton,
+    Text,
 } from './PageThreeStyles'
 import { FullAddressDetails } from '../../utils/constants'
 import { open, close } from '../../reducer/PopupSlice'
 
 function PageThree() {
-    const [addressState, setAddressState] = useState<IAddress>({
+    const [addressLocalState, setAddressLocalState] = useState<IAddress>({
         addressLine1: '',
         addressLine2: '',
         townOrCity: '',
@@ -44,15 +45,15 @@ function PageThree() {
 
     const handleFullAddressSumbit = () => {
         if (
-            addressState.addressLine1 !== '' &&
-            addressState.addressLine2 !== '' &&
-            addressState.townOrCity !== '' &&
-            addressState.county !== '' &&
-            addressState.country !== '' &&
-            addressState.postcode !== ''
+            addressLocalState.addressLine1 !== '' &&
+            addressLocalState.addressLine2 !== '' &&
+            addressLocalState.townOrCity !== '' &&
+            addressLocalState.county !== '' &&
+            addressLocalState.country !== '' &&
+            addressLocalState.postcode !== ''
         ) {
             dispatch(close())
-            dispatch(setAddress(addressState))
+            dispatch(setAddress(addressLocalState))
             navigate('/page/4')
         } else {
             dispatch(open({ text: 'Missing Field', type: 'error' }))
@@ -60,7 +61,7 @@ function PageThree() {
     }
 
     const handleSearchPostCode = () => {
-        if (addressState.postcode === '' || !addressState.postcode) {
+        if (addressLocalState.postcode === '' || !addressLocalState.postcode) {
             dispatch(open({ text: 'Missing Postcode', type: 'error' }))
         } else {
             dispatch(close())
@@ -74,30 +75,29 @@ function PageThree() {
             <Title>Please enter your postcode in the box below</Title>
             <MessageConatiner>
                 <img src="/pageThree-message.svg" alt="Message Icon" />
-                <h2>We need this information for anti-fraud purposes.</h2>
+                <Text>We need this information for anti-fraud purposes.</Text>
             </MessageConatiner>
-            {addressState.postcode !== '' && clickSearch ? (
+            {addressLocalState.postcode !== '' && clickSearch ? (
                 <InputContainer>
                     {FullAddressDetails.map((line: string, index: number) => (
-                        <div key={index}>
-                            <InputLabel
-                                type="text"
-                                id={line}
-                                name={line}
-                                placeholder={addressLineObject[line]}
-                                value={
-                                    line.toLowerCase() === 'postcode'
-                                        ? addressState.postcode
-                                        : addressState[line]
-                                }
-                                onChange={(e) =>
-                                    setAddressState({
-                                        ...addressState,
-                                        [line]: e.target.value,
-                                    })
-                                }
-                            ></InputLabel>
-                        </div>
+                        <InputBox
+                            key={index}
+                            type="text"
+                            id={line}
+                            name={line}
+                            placeholder={addressLineObject[line]}
+                            value={
+                                line.toLowerCase() === 'postcode'
+                                    ? addressLocalState.postcode
+                                    : addressLocalState[line]
+                            }
+                            onChange={(e) =>
+                                setAddressLocalState({
+                                    ...addressLocalState,
+                                    [line]: e.target.value,
+                                })
+                            }
+                        ></InputBox>
                     ))}
                     <ContinueButton onClick={() => handleFullAddressSumbit()}>
                         Continue
@@ -111,8 +111,8 @@ function PageThree() {
                         name="postcode"
                         placeholder="Postcode"
                         onChange={(e) =>
-                            setAddressState({
-                                ...addressState,
+                            setAddressLocalState({
+                                ...addressLocalState,
                                 postcode: e.target.value,
                             })
                         }
