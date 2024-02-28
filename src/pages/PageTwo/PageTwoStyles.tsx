@@ -15,16 +15,19 @@ export const Selections = styled.button<
     font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 600;
-    padding: 16px, 112px;
-    width: 450px;
-    height: 50px;
-    color: ${(props) => (props.colourChange ? '#21d63e' : 'black')};
+    padding: 12px, 16px;
+    width: 300px;
+    height: 39px;
+    color: ${(props) => (props.colourChange ? '#21d63e' : '#172C3B')};
     border: 1px solid #172c3b;
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
-    margin: 10px;
+    margin: 15px;
     display: flex;
     align-items: center;
+    background-color: #f6f6f6;
+    text-align: left;
+    gap: 10px;
 `
 
 export const CircleSelection = styled.div<
@@ -37,7 +40,6 @@ export const CircleSelection = styled.div<
 >`
     width: 20px;
     height: 20px;
-    // border: 2px solid #172c3b;
     border: 2px solid ${(props) => (props.colourChange ? '#21d63e' : '#172c3b')};
     border-radius: 50%;
     margin-right: 8px;

@@ -18,9 +18,9 @@ export const Button = styled.button<
     height: 42px;
     font-size: 16px;
     background-color: ${(props) => (props.colour ? '#21d63e' : '')};
-    color: ${(props) => (props.colour ? '#ffffff' : 'black')};
+    color: ${(props) => (props.colour ? '#ffffff' : '#172C3B')};
     border: 1px solid #172c3b;
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
-    margin: 10px;
+    margin: 16px;
 `

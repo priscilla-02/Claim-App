@@ -1,5 +1,25 @@
 import styled from 'styled-components'
 
+interface DobBoxProps {
+    id: string
+    value: string
+    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
+    children?: React.ReactNode
+}
+
+interface TitleBoxProps {
+    id: string
+    value: string
+    onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void
+    children?: React.ReactNode
+}
+
+interface SelectOptionsProps {
+    key: string
+    value: string
+    children?: React.ReactNode
+}
+
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -29,16 +49,26 @@ export const MaidenNameBox = styled.div`
     align-items: center;
 `
 
-export const DropdownTitle = styled.div`
+export const DropdownSelectTitle = styled.select<TitleBoxProps>`
     border: 0.6px solid #254358;
     background-color: #f6f6f6;
     border-radius: 10px;
-    width: 103px;
+    width: 95px;
     height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #172c3b;
+    // position: relative;
+`
+
+export const SelectOptions = styled.option<SelectOptionsProps>`
+    background-color: #f6f6f6;
+    color: #172c3b;
+    // position: relative;
+    // top: 100%;
+    // left: 100%;
 `
 
 export const FormDOB = styled.div`
@@ -48,7 +78,7 @@ export const FormDOB = styled.div`
     gap: 7px;
 `
 
-export const DropdownDOB = styled.div`
+export const DropdownSelectDOB = styled.select<DobBoxProps>`
     border: 0.6px solid #254358;
     background-color: #f6f6f6;
     border-radius: 10px;
@@ -57,5 +87,6 @@ export const DropdownDOB = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: #172c3b;
 `

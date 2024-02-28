@@ -2,7 +2,7 @@ import React, { FC, ReactElement } from 'react'
 import {
     Container,
     GuaranteeBox,
-    BenefitDiv,
+    BenefitBox,
     Wrapper,
     TopTextBox,
     CopyrightText,
@@ -11,6 +11,14 @@ import {
     LogoBox,
     BottomTextBox,
     MainLogo,
+    BenefitPoint,
+    SecureTextTopLine,
+    SecureTextBottomLine,
+    CompanyInfo,
+    PrivacyText,
+    DevelopedText,
+    DevelopedBox,
+    CompanyLogo,
 } from './footerStyle'
 import { FooterArray } from '../../utils/constants'
 import {
@@ -18,28 +26,27 @@ import {
     ExpertLogo,
     PlevinClaims,
     TextBox,
-    TickIcon,
 } from '../../styles/globalStyles'
 export const Footer: FC = (): ReactElement => {
     return (
         <Container>
             <GuaranteeBox>
                 {FooterArray.map((point: string) => (
-                    <BenefitDiv key={point}>
+                    <BenefitBox key={point}>
                         <img
                             src="/footer-tick-stamp.svg"
                             alt="Tick Stamp Icon"
                         />
-                        <header>{point}</header>
-                    </BenefitDiv>
+                        <BenefitPoint>{point}</BenefitPoint>
+                    </BenefitBox>
                 ))}
             </GuaranteeBox>
             <Wrapper>
                 <LogoBox>
                     <ExpertLogo>
-                        <TickIcon>
+                        <div>
                             <img src="/global-tick.svg" alt="Tick Icon" />
-                        </TickIcon>
+                        </div>
                         <TextBox>
                             <Expert>Expert</Expert>
                             <PlevinClaims>PlevinClaims</PlevinClaims>
@@ -50,13 +57,15 @@ export const Footer: FC = (): ReactElement => {
                             <img src="/footer-lock.svg" alt="Lock Icon" />
                         </div>
                         <SecureTextBox>
-                            <h1>SECURE</h1>
-                            <h1>SSL ENCRYPTION</h1>
+                            <SecureTextTopLine>SECURE</SecureTextTopLine>
+                            <SecureTextBottomLine>
+                                SSL ENCRYPTION
+                            </SecureTextBottomLine>
                         </SecureTextBox>
                     </SecureLogo>
                 </LogoBox>
                 <TopTextBox>
-                    <h2>
+                    <CompanyInfo>
                         Expert Plevin Claims is a trading name of Veriform
                         Limited, a company registered in England and Wales
                         (registration number 07195400) whose registered office
@@ -64,18 +73,23 @@ export const Footer: FC = (): ReactElement => {
                         4JY. Veriform Limited is authorised and regulated by the
                         Financial Conduct Authority (FCA) under registration
                         number 690199.
-                    </h2>
+                    </CompanyInfo>
                     <CopyrightText>
                         © Copyright Veriform Limited 2023. All rights reserved.
                     </CopyrightText>
                 </TopTextBox>
                 <BottomTextBox>
                     <div>
-                        <p>Privacy Policy</p>
-                        <MainLogo>
-                            <p>Developed and marketed by</p>
-                            <img src="/footer-main-logo.svg" alt="Main Logo" />
-                        </MainLogo>
+                        <PrivacyText>Privacy Policy</PrivacyText>
+                        <DevelopedBox>
+                            <DevelopedText>
+                                Developed and marketed by
+                            </DevelopedText>
+                            <CompanyLogo
+                                src="/footer-main-logo.svg"
+                                alt="Main Logo"
+                            />
+                        </DevelopedBox>
                     </div>
                     <div>
                         <img src="/footer-badge.svg" alt="Digital Badge" />

@@ -36,7 +36,7 @@ export const RightTextBox = styled.div`
     flex-direction: column;
 `
 export const RightTextHeader = styled.h1`
-    font-family: Nunito Sans;
+    font-family: Montserrat;
     font-size: 10px;
     line-height: 10px;
 `
