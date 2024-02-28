@@ -8,8 +8,8 @@ export interface UserSubmissionState {
     userInfo: IUserinfo
     email: string
     phoneNo: string
-    iva: boolean
     signature: string
+    iva: boolean
 }
 
 export interface IUserinfo {
@@ -51,8 +51,8 @@ export const initialState: UserSubmissionState = {
     },
     email: '',
     phoneNo: '',
-    iva: false,
     signature: '',
+    iva: false,
 }
 export const UserInfoSlice = createSlice({
     name: 'userInfo',
@@ -76,11 +76,11 @@ export const UserInfoSlice = createSlice({
         setPhoneNo: (state, action: PayloadAction<string>) => {
             state.phoneNo = action.payload
         },
-        setIva: (state, action: PayloadAction<boolean>) => {
-            state.iva = action.payload
-        },
         setSignature: (state, action: PayloadAction<string>) => {
             state.signature = action.payload
+        },
+        setIva: (state, action: PayloadAction<boolean>) => {
+            state.iva = action.payload
         },
     },
 })
@@ -92,8 +92,8 @@ export const {
     setUserInfo,
     setEmail,
     setPhoneNo,
-    setIva,
     setSignature,
+    setIva,
 } = UserInfoSlice.actions
 
 export default UserInfoSlice.reducer

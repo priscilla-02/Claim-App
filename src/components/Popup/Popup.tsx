@@ -21,7 +21,7 @@ export const Popup: FC = (): ReactElement => {
         <PopupComponent bgColor={popupState.type == 'error' ? 'red' : 'green'}>
             <span>{popupState.text}</span>
             <CloseIcon
-                src="../../../public/popup-close.svg"
+                src="/popup-close.svg"
                 onClick={() => dispatch(close())}
             />
         </PopupComponent>
