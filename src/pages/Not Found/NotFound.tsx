@@ -1,12 +1,13 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
+import { Header } from '../../styles/globalStyles'
 
 function NotFound() {
-  return (
-    <>
-      <h1>Not Found</h1>
-      <Link to="/">GO HOME</Link>
-    </>
-  );
+    return (
+        <>
+            <Header>Page Not Found</Header>
+            <Link to="/">Home</Link>
+        </>
+    )
 }
 
-export default NotFound;
+export default NotFound
