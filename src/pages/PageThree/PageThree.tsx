@@ -15,6 +15,9 @@ import {
     InputContainer,
     PostcodeLabel,
     SearchButton,
+    PreviousAddressBox,
+    PreviousAddress,
+    AddButton,
 } from './PageThreeStyles'
 import { FullAddressDetails } from '../../utils/constants'
 import { open, close } from '../../reducer/PopupSlice'
@@ -105,6 +108,15 @@ function PageThree() {
                     <ContinueButton onClick={() => handleFullAddressSumbit()}>
                         Continue
                     </ContinueButton>
+                    <PreviousAddressBox>
+                        <PreviousAddress>Previous address</PreviousAddress>
+                        <MessageInfoText>
+                            Please enter any previous addresses you might have
+                            lived at when you originally took out the credit (if
+                            different from the address above)
+                        </MessageInfoText>
+                    </PreviousAddressBox>
+                    <AddButton>Add Address</AddButton>
                 </InputContainer>
             ) : (
                 <PostCodeConatiner>
