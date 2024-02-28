@@ -70,15 +70,12 @@ export const DropdownSelectTitle = styled.select<TitleBoxProps>`
     align-items: center;
     text-align: center;
     color: #172c3b;
-    // position: relative;
+    margin-left: 25%;
 `
 
 export const SelectOptions = styled.option<SelectOptionsProps>`
     background-color: #f6f6f6;
     color: #172c3b;
-    // position: relative;
-    // top: 100%;
-    // left: 100%;
 `
 
 export const FormDOB = styled.div`

@@ -28,7 +28,9 @@ function PageSeven() {
         (state: RootState) => state.userInfo.userInfo.firstName
     )
     const signCanvas = useRef<SignatureCanvas>(null)
-    const [signatureDraw, setSignatureDraw] = useState<string>('')
+    const [signatureDraw, setSignatureDraw] = useState<string | undefined>(
+        undefined
+    )
     const [isDrawing, setIsDrawing] = useState<boolean>(false)
 
     const handleSignatureStart = () => {
@@ -42,9 +44,8 @@ function PageSeven() {
     }
 
     const handleClaimSumbit = () => {
-        if (signatureDraw !== '') {
+        if (signatureDraw) {
             dispatch(close())
-            console.log('submit signature')
             dispatch(setSignature(signatureDraw))
             navigate('/page/8')
         } else {
@@ -54,7 +55,7 @@ function PageSeven() {
     return (
         <Container>
             <Header>
-                Copy You’re almost finished, {firstNameState}. You just need to
+                You’re almost finished, {firstNameState}. You just need to
                 review this…
             </Header>
             <Title>Please sign here to submit your Plevin claim.</Title>

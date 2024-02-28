@@ -45,4 +45,6 @@ export const CircleSelection = styled.div<
     margin-right: 8px;
     cursor: pointer;
     margin: 20px;
+    background-color: ${(props) =>
+        props.colourChange ? '#21d63e' : 'transparent'};
 `
