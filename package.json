@@ -23,6 +23,7 @@
         "react-i18next": "^11.18.6",
         "react-redux": "^8.0.4",
         "react-router-dom": "^6.3.0",
+        "react-signature-canvas": "^1.0.6",
         "styled-components": "^5.3.11",
         "twin.macro": "^3.1.0"
     },

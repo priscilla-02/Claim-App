@@ -1,27 +1,56 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'
+import { useState, useRef } from 'react'
+import { setSignature } from '../../reducer/UserSlice'
+import { open, close } from '../../reducer/PopupSlice'
+import SignatureCanvas from 'react-signature-canvas'
 
 import { ContinueButton, Header, Title } from '../../styles/globalStyles'
 import {
+    CanvasOverlay,
+    CanvasPlaceholder,
     Container,
     DisclaimerText,
     DisclaimerTextSpan,
     ReviewText,
     ReviewTextSpan,
     SignatureContainer,
+    SignatureHeader,
+    SignaturePad,
+    SignaturePreview,
 } from './PageSevenStyle'
 
 function PageSeven() {
+    const dispatch = useDispatch()
     const navigate = useNavigate()
     const firstNameState = useSelector(
         (state: RootState) => state.userInfo.userInfo.firstName
     )
+    const signCanvas = useRef<SignatureCanvas>(null)
+    const [signatureDraw, setSignatureDraw] = useState<string>('')
+    const [isDrawing, setIsDrawing] = useState<boolean>(false)
 
-    const handleClaimSumbit = () => {
-        navigate('/page/8')
+    const handleSignatureStart = () => {
+        setIsDrawing(true)
     }
 
+    const handleSignatureEnd = () => {
+        setSignatureDraw(
+            signCanvas.current?.getTrimmedCanvas().toDataURL('image/png')
+        )
+    }
+
+    const handleClaimSumbit = () => {
+        if (signatureDraw !== '') {
+            dispatch(close())
+            console.log('submit signature')
+            dispatch(setSignature(signatureDraw))
+            navigate('/page/8')
+        } else {
+            dispatch(open({ text: 'Missing Signature', type: 'error' }))
+        }
+    }
     return (
         <Container>
             <Header>
@@ -29,12 +58,41 @@ function PageSeven() {
                 review this…
             </Header>
             <Title>Please sign here to submit your Plevin claim.</Title>
+
             <SignatureContainer>
-                <ReviewText>
-                    Review your <ReviewTextSpan>claim pack here</ReviewTextSpan>
-                    .
-                </ReviewText>
+                <SignatureHeader>
+                    DRAW SIGNATURE WITH MOUSE ON DESKTOP / FINGER ON MOBILE OR
+                    TABLET
+                </SignatureHeader>
+                <SignaturePad>
+                    <CanvasOverlay>
+                        {!isDrawing && (
+                            <CanvasPlaceholder> E-Signature</CanvasPlaceholder>
+                        )}
+                        <SignatureCanvas
+                            penColor="black"
+                            canvasProps={{
+                                width: 332,
+                                height: 206,
+                                className: 'sigCanvas',
+                            }}
+                            ref={signCanvas}
+                            onBegin={handleSignatureStart}
+                            onEnd={handleSignatureEnd}
+                        />
+                    </CanvasOverlay>
+                </SignaturePad>
             </SignatureContainer>
+            {signatureDraw && (
+                <>
+                    <SignaturePreview>Signature Preview:</SignaturePreview>
+                    <img src={signatureDraw} alt="Signautre Preview" />
+                </>
+            )}
+            <ReviewText>
+                Review your <ReviewTextSpan>claim pack here</ReviewTextSpan>.
+            </ReviewText>
+
             <DisclaimerText>
                 <DisclaimerTextSpan>Disclaimer:</DisclaimerTextSpan> By
                 proceeding, you agree to be the terms listed in Privacy Policy.
