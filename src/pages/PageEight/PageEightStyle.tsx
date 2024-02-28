@@ -8,6 +8,10 @@ export const Container = styled.div`
     margin: 0 20px;
 `
 
+export const TitleBox = styled.div`
+    width: 90%;
+`
+
 export const Button = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any> & {
         colour: boolean

@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 interface BenefitBoxProps {
     key: string
+    children?: React.ReactNode
 }
 
 export const Container = styled.footer`
@@ -23,6 +24,8 @@ export const GuaranteeBox = styled.div`
     background-color: #f6f6f6;
     width: 100%;
     margin-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 `
 
 export const BenefitBox = styled.div<BenefitBoxProps>`
@@ -30,7 +33,7 @@ export const BenefitBox = styled.div<BenefitBoxProps>`
     flex-direction: column;
     align-items: center;
 `
-export const BenefitPoint = styled.div<BenefitBoxProps>`
+export const BenefitPoint = styled.div`
     color: #172c3b;
     margin: 18.71px;
 `

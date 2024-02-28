@@ -20,6 +20,16 @@ interface SelectOptionsProps {
     children?: React.ReactNode
 }
 
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+`
+export const TitleBox = styled.div`
+    width: 90%;
+`
+
 export const InputContainer = styled.div`
     display: flex;
     flex-direction: column;

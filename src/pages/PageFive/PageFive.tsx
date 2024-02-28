@@ -12,7 +12,7 @@ import {
     MessageInfoText,
     Title,
 } from '../../styles/globalStyles'
-import { Container } from './PageFiveStyles'
+import { Container, TitleBox } from './PageFiveStyles'
 
 function PageFive() {
     const dispatch = useDispatch()
@@ -41,7 +41,11 @@ function PageFive() {
                 <Header>
                     Thanks for that, {firstNameState}! You’re almost done…
                 </Header>
-                <Title>Please enter your email address in the box below</Title>
+                <TitleBox>
+                    <Title>
+                        Please enter your email address in the box below
+                    </Title>
+                </TitleBox>
                 <MessageInfoContainer>
                     <img src="/pageThree-message.svg" alt="Message Icon" />
                     <MessageInfoText>

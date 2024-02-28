@@ -71,6 +71,7 @@ export const ReviewText = styled.h1`
     letter-spacing: 0em;
     text-align: center;
     color: #254358;
+    padding-top: 20px;
 `
 export const ReviewTextSpan = styled.span`
     font-family: Nunito Sans;
@@ -92,8 +93,7 @@ export const DisclaimerText = styled.h1`
     color: #254358;
     background-color: #f6f6f6;
     width: 350px;
-    height: 96px;
-    padding: 8px;
+    padding: 5px;
     border-radius: 10px;
     gap: 8px;
 `

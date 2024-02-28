@@ -76,6 +76,8 @@ export const MessageInfoContainer = styled.div`
     align-items: center;
     background-color: #f6f6f6;
     gap: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
 `
 
 export const MessageInfoText = styled.h1`

@@ -8,6 +8,7 @@ import { IUserinfo, setUserInfo } from '../../reducer/UserSlice'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import {
+    Container,
     DropdownSelectDOB,
     DropdownSelectTitle,
     FormDOB,
@@ -16,6 +17,7 @@ import {
     SelectOptions,
     Text,
     TextBox,
+    TitleBox,
 } from './PageFourStyles'
 import { UserTitleOptions } from '../../utils/constants'
 import { open, close } from '../../reducer/PopupSlice'
@@ -112,12 +114,17 @@ function PageFour() {
 
     return (
         <>
-            <Header>Good news! It looks like you might have a claim!</Header>
-            <Title>
-                In order to proceed with your claim, please enter your details
-                below:
-            </Title>
-
+            <Container>
+                <Header>
+                    Good news! It looks like you might have a claim!
+                </Header>
+                <TitleBox>
+                    <Title>
+                        In order to proceed with your claim, please enter your
+                        details below:
+                    </Title>
+                </TitleBox>
+            </Container>
             <DropdownSelectTitle
                 id="title"
                 value={selectedTitle}

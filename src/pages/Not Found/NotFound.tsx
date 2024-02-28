@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom'
-import { Header } from '../../styles/globalStyles'
+import { Container } from './NotFoundStyles'
+import { ContinueButton } from '../../styles/globalStyles'
 
 function NotFound() {
     return (
-        <>
-            <Header>Page Not Found</Header>
-            <Link to="/">Home</Link>
-        </>
+        <Container>
+            <header>Page Not Found :(</header>
+            <Link to="/">
+                <ContinueButton>Go to Home</ContinueButton>
+            </Link>
+        </Container>
     )
 }
 

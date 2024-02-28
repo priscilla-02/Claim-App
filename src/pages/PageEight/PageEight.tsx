@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'
 import { Header, Title } from '../../styles/globalStyles'
-import { Button, Container } from './PageEightStyle'
+import { Button, Container, TitleBox } from './PageEightStyle'
 
 function PageEight() {
     const navigate = useNavigate()
@@ -24,10 +24,12 @@ function PageEight() {
                 We just need a couple more things from you, {firstNameState}
                 ...
             </Header>
-            <Title>
-                Have you ever been in or are proposed to be in an IVA or
-                declared bankrupt?*
-            </Title>
+            <TitleBox>
+                <Title>
+                    Have you ever been in or are proposed to be in an IVA or
+                    declared bankrupt?*
+                </Title>
+            </TitleBox>
             <Button colour={true} onClick={() => handleSumbit(true)}>
                 Yes
             </Button>

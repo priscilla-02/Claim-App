@@ -4,6 +4,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 `
 
 export const MessageBox = styled.div`
@@ -11,6 +12,7 @@ export const MessageBox = styled.div`
     flex-direction: column;
     gap: 8px;
     margin: 32px 0;
+    width: 80%;
 `
 export const Message = styled.div`
     font-family: Nunito Sans;

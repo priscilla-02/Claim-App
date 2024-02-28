@@ -4,18 +4,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
-
-export const MessageBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 32px 0;
-    width: 80%;
-`
-export const Message = styled.div`
+    gap: 20px;
+    padding-top: 150px;
     font-family: Nunito Sans;
-    font-size: 14px;
+    font-size: 35px;
     font-weight: 400;
     line-height: 19.1px;
     letter-spacing: 0em;

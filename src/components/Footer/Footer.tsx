@@ -10,7 +10,6 @@ import {
     SecureTextBox,
     LogoBox,
     BottomTextBox,
-    MainLogo,
     BenefitPoint,
     SecureTextTopLine,
     SecureTextBottomLine,

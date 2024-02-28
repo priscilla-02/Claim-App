@@ -7,6 +7,7 @@ import {
     CircleSelection,
     Selections,
     SelectionsContainer,
+    TitleBox,
 } from './PageTwoStyles'
 import { BanksAndLenderArray } from '../../utils/constants'
 
@@ -35,7 +36,6 @@ function PageTwo() {
             <Title>
                 Please can you tell us which bank(s) or lenders you have used?
             </Title>
-
             <SelectionsContainer>
                 {BanksAndLenderArray.map((lender: string) => (
                     <Selections
