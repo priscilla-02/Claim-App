@@ -44,12 +44,12 @@ function PageTwo() {
                     >
                         {lenderArray.includes(lender) ? (
                             <CircleSelection
-                                src="../../../public/selected-circle.svg"
+                                src="/selected-circle.svg"
                                 alt="Selected"
                             />
                         ) : (
                             <CircleSelection
-                                src="../../../public/unselected-circle.svg"
+                                src="/unselected-circle.svg"
                                 alt="Unselected"
                             />
                         )}
