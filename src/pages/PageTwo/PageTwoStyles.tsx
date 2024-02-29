@@ -1,6 +1,11 @@
 import styled, { ThemedStyledProps } from 'styled-components'
 import { ButtonHTMLAttributes } from 'react'
 
+interface CircleSelectionProps {
+    src: string
+    alt: string
+}
+
 export const SelectionsContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -30,21 +35,6 @@ export const Selections = styled.button<
     gap: 10px;
 `
 
-export const CircleSelection = styled.div<
-    ThemedStyledProps<
-        {
-            colourChange: boolean
-        },
-        any
-    >
->`
-    width: 20px;
-    height: 20px;
-    border: 2px solid ${(props) => (props.colourChange ? '#21d63e' : '#172c3b')};
-    border-radius: 50%;
-    margin-right: 8px;
-    cursor: pointer;
-    margin: 20px;
-    background-color: ${(props) =>
-        props.colourChange ? '#21d63e' : 'transparent'};
+export const CircleSelection = styled.img<CircleSelectionProps>`
+    margin-left: 20px;
 `

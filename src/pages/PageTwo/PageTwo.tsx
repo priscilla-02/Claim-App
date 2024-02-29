@@ -7,7 +7,6 @@ import {
     CircleSelection,
     Selections,
     SelectionsContainer,
-    TitleBox,
 } from './PageTwoStyles'
 import { BanksAndLenderArray } from '../../utils/constants'
 
@@ -43,9 +42,18 @@ function PageTwo() {
                         onClick={() => bankUseSelection(lender)}
                         colourChange={lenderArray.includes(lender)}
                     >
-                        <CircleSelection
-                            colourChange={lenderArray.includes(lender)}
-                        ></CircleSelection>
+                        {lenderArray.includes(lender) ? (
+                            <CircleSelection
+                                src="../../../public/selected-circle.svg"
+                                alt="Selected"
+                            />
+                        ) : (
+                            <CircleSelection
+                                src="../../../public/unselected-circle.svg"
+                                alt="Unselected"
+                            />
+                        )}
+
                         {lender}
                     </Selections>
                 ))}
