@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux'
-import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { RootState } from '../../store/index'
 import { setEmail } from '../../reducer/UserSlice'
 import { open, close } from '../../reducer/PopupSlice'
 import {
@@ -17,10 +17,11 @@ import { Container, TitleBox } from './PageFiveStyles'
 function PageFive() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const [emailInput, setEmailInput] = useState<string>('')
+
     const firstNameState = useSelector(
         (state: RootState) => state.userInfo.userInfo.firstName
     )
-    const [emailInput, setEmailInput] = useState<string>('')
 
     const handleEmailSumbit = () => {
         const emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/

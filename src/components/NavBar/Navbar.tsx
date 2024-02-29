@@ -12,7 +12,7 @@ import {
     RightLogosBox,
     RightTextBox,
     RightTextHeader,
-} from './navBarStyle'
+} from './NavBarStyles'
 
 const Navbar: FC = (): ReactElement => {
     return (
@@ -33,6 +33,7 @@ const Navbar: FC = (): ReactElement => {
                             alt="Secure SSL Encryption Icon"
                         />
                     </div>
+
                     <RightTextBox>
                         <RightTextHeader>SECURE</RightTextHeader>
                         <RightTextHeader>SSL ENCRYPTION</RightTextHeader>

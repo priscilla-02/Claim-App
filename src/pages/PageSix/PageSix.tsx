@@ -12,13 +12,13 @@ import {
     MessageInfoText,
     Title,
 } from '../../styles/globalStyles'
-
-import { Container } from './PageSixStyle'
+import { Container } from './PageSixStyles'
 
 function PageSix() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
     const [phoneNoInput, setphoneNoInput] = useState<string>('')
+
     const firstNameState = useSelector(
         (state: RootState) => state.userInfo.userInfo.firstName
     )
@@ -31,7 +31,6 @@ function PageSix() {
 
         if (checkValidPhonenNo) {
             dispatch(close())
-            console.log('submit phone no')
             dispatch(setPhoneNo(phoneNoInput))
             navigate('/page/7')
         } else {

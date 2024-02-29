@@ -1,12 +1,15 @@
+import { IUserinfo, setUserInfo } from '../../reducer/UserSlice'
+import { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { open, close } from '../../reducer/PopupSlice'
+import { UserTitleOptions } from '../../utils/constants'
 import {
     ContinueButton,
     Header,
     InputBox,
     Title,
 } from '../../styles/globalStyles'
-import { IUserinfo, setUserInfo } from '../../reducer/UserSlice'
-import { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
 import {
     Container,
     DropdownSelectDOB,
@@ -19,13 +22,15 @@ import {
     TextBox,
     TitleBox,
 } from './PageFourStyles'
-import { UserTitleOptions } from '../../utils/constants'
-import { open, close } from '../../reducer/PopupSlice'
-import { useNavigate } from 'react-router-dom'
 
 function PageFour() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
+    const [selectedTitle, setSelectedTitle] = useState<string>('')
+    const [selectedDay, setSelectedDay] = useState<string>('')
+    const [selectedMonth, setSelectedMonth] = useState<string>('')
+    const [selectedYear, setSelectedYear] = useState<string>('')
+    const [isValid, setIsValid] = useState<boolean>(false)
 
     const [userLocalState, setUserLocalState] = useState<IUserinfo>({
         title: '',
@@ -42,11 +47,6 @@ function PageFour() {
         maidenName: 'Enter here',
         dob: '',
     }
-    const [selectedTitle, setSelectedTitle] = useState<string>('')
-    const [selectedDay, setSelectedDay] = useState<string>('')
-    const [selectedMonth, setSelectedMonth] = useState<string>('')
-    const [selectedYear, setSelectedYear] = useState<string>('')
-    const [isValid, setIsValid] = useState<boolean>(false)
 
     useEffect(() => {
         const validateDateOfBirth = () => {
@@ -61,7 +61,6 @@ function PageFour() {
                 const formattedDay = selectedDay.padStart(2, '0')
                 const formattedMonth = selectedMonth.padStart(2, '0')
                 const formattedDOB = `${formattedDay}-${formattedMonth}-${selectedYear}`
-                console.log('formattedDOB', formattedDOB)
                 setUserLocalState({ ...userLocalState, dob: formattedDOB })
             }
         }
@@ -80,6 +79,7 @@ function PageFour() {
         }
         return 0
     }
+
     const isLeapYear = (year: any) => {
         return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0
     }
@@ -107,7 +107,6 @@ function PageFour() {
         ) {
             dispatch(open({ text: 'Missing Field', type: 'error' }))
         } else if (!isValid) {
-            console.log('DOB is not valid for submittion')
             dispatch(open({ text: 'Invalid Date of Birth', type: 'error' }))
         }
     }

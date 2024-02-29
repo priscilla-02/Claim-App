@@ -6,14 +6,12 @@
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
-        "preview": "vite preview",
-        "test": "vitest --coverage"
+        "preview": "vite preview"
     },
     "dependencies": {
         "@emotion/react": "^11.10.4",
         "@emotion/styled": "^11.10.4",
-        "@mui/icons-material": "^5.10.6",
-        "@mui/material": "^5.10.7",
+        "@fontsource/nunito-sans": "^5.0.8",
         "@reduxjs/toolkit": "^1.8.5",
         "@types/react-redux": "^7.1.24",
         "axios": "^1.6.7",
@@ -29,8 +27,6 @@
         "twin.macro": "^3.1.0"
     },
     "devDependencies": {
-        "@testing-library/jest-dom": "^5.16.5",
-        "@testing-library/react": "^13.3.0",
         "@types/react": "^18.0.17",
         "@types/react-dom": "^18.0.6",
         "@types/react-signature-canvas": "^1.0.5",

@@ -5,10 +5,10 @@ import {
     Navigate,
 } from 'react-router-dom'
 import { routes as appRoutes } from './routes'
+import Popup from './components/Popup/Popup'
 import Navbar from './components/NavBar/Navbar'
 import Footer from './components/Footer/Footer'
 import NotFound from './pages/Not Found/NotFound'
-import Popup from './components/Popup/Popup'
 
 export function App() {
     return (

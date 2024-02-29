@@ -1,3 +1,4 @@
+margin: 0
 import React, { FC, ReactElement } from 'react'
 import {
     Container,
@@ -18,7 +19,9 @@ import {
     DevelopedText,
     DevelopedBox,
     CompanyLogo,
-} from './footerStyle'
+    BadgeIcon,
+    LockIcon,
+} from './FooterStyles'
 import { FooterArray } from '../../utils/constants'
 import {
     Expert,
@@ -43,9 +46,7 @@ export const Footer: FC = (): ReactElement => {
             <Wrapper>
                 <LogoBox>
                     <ExpertLogo>
-                        <div>
-                            <img src="/global-tick.svg" alt="Tick Icon" />
-                        </div>
+                        <img src="/global-tick.svg" alt="Tick Icon" />
                         <TextBox>
                             <Expert>Expert</Expert>
                             <PlevinClaims>PlevinClaims</PlevinClaims>
@@ -53,7 +54,7 @@ export const Footer: FC = (): ReactElement => {
                     </ExpertLogo>
                     <SecureLogo>
                         <div>
-                            <img src="/footer-lock.svg" alt="Lock Icon" />
+                            <LockIcon src="/footer-lock.svg" alt="Lock Icon" />
                         </div>
                         <SecureTextBox>
                             <SecureTextTopLine>SECURE</SecureTextTopLine>
@@ -90,9 +91,7 @@ export const Footer: FC = (): ReactElement => {
                             />
                         </DevelopedBox>
                     </div>
-                    <div>
-                        <img src="/footer-badge.svg" alt="Digital Badge" />
-                    </div>
+                    <BadgeIcon src="/footer-badge.svg" alt="Digital Badge" />
                 </BottomTextBox>
             </Wrapper>
         </Container>

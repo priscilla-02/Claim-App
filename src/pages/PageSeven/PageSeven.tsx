@@ -5,7 +5,6 @@ import { useState, useRef } from 'react'
 import { setSignature } from '../../reducer/UserSlice'
 import { open, close } from '../../reducer/PopupSlice'
 import SignatureCanvas from 'react-signature-canvas'
-
 import { ContinueButton, Header, Title } from '../../styles/globalStyles'
 import {
     CanvasOverlay,
@@ -19,19 +18,20 @@ import {
     SignatureHeader,
     SignaturePad,
     SignaturePreview,
-} from './PageSevenStyle'
+} from './PageSevenStyles'
 
 function PageSeven() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const firstNameState = useSelector(
-        (state: RootState) => state.userInfo.userInfo.firstName
-    )
-    const signCanvas = useRef<SignatureCanvas>(null)
     const [signatureDraw, setSignatureDraw] = useState<string | undefined>(
         undefined
     )
     const [isDrawing, setIsDrawing] = useState<boolean>(false)
+    const signCanvas = useRef<SignatureCanvas>(null)
+
+    const firstNameState = useSelector(
+        (state: RootState) => state.userInfo.userInfo.firstName
+    )
 
     const handleSignatureStart = () => {
         setIsDrawing(true)
@@ -52,6 +52,7 @@ function PageSeven() {
             dispatch(open({ text: 'Missing Signature', type: 'error' }))
         }
     }
+
     return (
         <Container>
             <Header>

@@ -29,6 +29,7 @@ export const Expert = styled.h1`
     font-weight: bolder;
     font-size: 25px;
     height: 35px;
+    margin: 0;
 `
 export const PlevinClaims = styled.div`
     font-size: 14px;

@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { ContinueButton, Title } from '../../styles/globalStyles'
-import { Container, Message, MessageBox } from './PageSorryStyle'
+import { Container, Message, MessageBox } from './PageSorryStyles'
 
 function PageSorry() {
     const navigate = useNavigate()

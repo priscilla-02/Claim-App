@@ -1,25 +1,25 @@
 import { useDispatch } from 'react-redux'
+import { open } from '../../reducer/PopupSlice'
 import { setIva } from '../../reducer/UserSlice'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'
-import { Header, Title } from '../../styles/globalStyles'
-import { Button, Container, TitleBox } from './PageEightStyle'
 import axios from 'axios'
-import { open } from '../../reducer/PopupSlice'
+import { Header, Title } from '../../styles/globalStyles'
+import { Button, Container, TitleBox } from './PageEightStyles'
 
 function PageEight() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
-    const userSubmissionState = useSelector(
-        (state: RootState) => state.userInfo
-    )
+
     const firstNameState = useSelector(
         (state: RootState) => state.userInfo.userInfo.firstName
     )
+    const userSubmissionState = useSelector(
+        (state: RootState) => state.userInfo
+    )
 
     const handleSumbit = async (ivaBol: boolean) => {
-        console.log('Data in submittion', userSubmissionState)
         dispatch(setIva(ivaBol))
 
         //For Test
@@ -33,7 +33,6 @@ function PageEight() {
             const response = await axios.post('API-endpoint', {
                 userSubmissionState: userSubmissionState,
             })
-            console.log('Data submitted successfully:', response.data)
             dispatch(open({ text: 'Submittion Successful', type: 'success' }))
             navigate('/page/complete')
         } catch (error) {

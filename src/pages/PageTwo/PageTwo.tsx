@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { setBankUsed } from '../../reducer/UserSlice'
 import { useState } from 'react'
+import { setBankUsed } from '../../reducer/UserSlice'
+import { BanksAndLenderArray } from '../../utils/constants'
 import { ContinueButton, Header, Title } from '../../styles/globalStyles'
 import {
     CircleSelection,
     Selections,
     SelectionsContainer,
 } from './PageTwoStyles'
-import { BanksAndLenderArray } from '../../utils/constants'
 
 function PageTwo() {
     const [lenderArray, setLenderArray] = useState<string[]>([])

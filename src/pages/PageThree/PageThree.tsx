@@ -2,6 +2,8 @@ import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { IAddress, setAddress } from '../../reducer/UserSlice'
+import { open, close } from '../../reducer/PopupSlice'
+import { FullAddressDetails } from '../../utils/constants'
 import {
     ContinueButton,
     Header,
@@ -19,8 +21,7 @@ import {
     PreviousAddress,
     AddButton,
 } from './PageThreeStyles'
-import { FullAddressDetails } from '../../utils/constants'
-import { open, close } from '../../reducer/PopupSlice'
+
 function PageThree() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -63,6 +64,7 @@ function PageThree() {
             dispatch(open({ text: 'Missing Field', type: 'error' }))
         }
     }
+
     const handleSearchPostCode = () => {
         if (
             addressLocalState[0].postcode === '' ||
@@ -88,6 +90,7 @@ function PageThree() {
             },
         ])
     }
+
     return (
         <>
             <Header>That's great! Now please could you enter this in…</Header>

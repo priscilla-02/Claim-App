@@ -1,11 +1,9 @@
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
-import { useNavigate } from 'react-router-dom'
-import { Container, MessageBox, Message } from './PageCompleteStyle'
+import { Container, MessageBox, Message } from './PageCompleteStyles'
 import { Title } from '../../styles/globalStyles'
 
 function PageComplete() {
-    const navigate = useNavigate()
     const firstNameState = useSelector(
         (state: RootState) => state.userInfo.userInfo.firstName
     )
