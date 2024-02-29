@@ -1,17 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-
 export interface UserSubmissionState {
     creditUse: boolean
     bankUsed: string[]
-    address: IAddress
+    address: IAddress[]
     userInfo: IUserinfo
     email: string
     phoneNo: string
     signature: string
     iva: boolean
 }
-
 export interface IUserinfo {
     title: string
     firstName: string
@@ -20,7 +18,6 @@ export interface IUserinfo {
     dob: string
     [key: string]: string
 }
-
 export interface IAddress {
     addressLine1: string
     addressLine2: string
@@ -30,18 +27,19 @@ export interface IAddress {
     postcode: string
     [key: string]: string
 }
-
 export const initialState: UserSubmissionState = {
     creditUse: false,
     bankUsed: [],
-    address: {
-        addressLine1: '',
-        addressLine2: '',
-        townOrCity: '',
-        county: '',
-        country: '',
-        postcode: '',
-    },
+    address: [
+        {
+            addressLine1: '',
+            addressLine2: '',
+            townOrCity: '',
+            county: '',
+            country: '',
+            postcode: '',
+        },
+    ],
     userInfo: {
         title: '',
         firstName: '',
@@ -64,7 +62,7 @@ export const UserInfoSlice = createSlice({
         setBankUsed: (state, action: PayloadAction<string[]>) => {
             state.bankUsed = action.payload
         },
-        setAddress: (state, action: PayloadAction<IAddress>) => {
+        setAddress: (state, action: PayloadAction<IAddress[]>) => {
             state.address = action.payload
         },
         setUserInfo: (state, action: PayloadAction<IUserinfo>) => {
@@ -84,7 +82,6 @@ export const UserInfoSlice = createSlice({
         },
     },
 })
-
 export const {
     setCreditUse,
     setBankUsed,
@@ -95,5 +92,4 @@ export const {
     setSignature,
     setIva,
 } = UserInfoSlice.actions
-
 export default UserInfoSlice.reducer
