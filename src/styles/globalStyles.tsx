@@ -87,8 +87,7 @@ export const MessageInfoContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    // background-color: #f6f6f6;
-    background-color: red;
+    background-color: #f6f6f6;
     gap: 5px;
     padding: 0 20px 0 10px;
     border-radius: 10px;

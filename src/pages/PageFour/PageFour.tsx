@@ -49,12 +49,14 @@ function PageFour() {
 
     useEffect(() => {
         const validateDateOfBirth = () => {
+            const MIN_YEAR = 1900
+            const MAX_YEAR = 2024
             const day = parseInt(selectedDay, 10)
             const month = parseInt(selectedMonth, 10)
             const year = parseInt(selectedYear, 10)
             const isValidDay = day >= 1 && day <= daysInMonth(month, year)
             const isValidMonth = month >= 1 && month <= 12
-            const isValidYear = year >= 1900 && year <= 2024
+            const isValidYear = year >= MIN_YEAR && year <= MAX_YEAR
             setIsValid(isValidDay && isValidMonth && isValidYear)
             if (isValidDay && isValidMonth && isValidYear) {
                 const formattedDay = selectedDay.padStart(2, '0')

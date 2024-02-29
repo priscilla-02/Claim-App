@@ -1,3 +1,5 @@
+import { IUserinfo } from '../reducer/UserSlice'
+
 export const FooterArray: string[] = [
     'Operating on a no-win, no-fee basis',
     'UK high-street banks are paying £Millions',
