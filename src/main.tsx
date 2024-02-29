@@ -5,6 +5,7 @@ import { store } from './store'
 import { WrappedApp } from './App'
 import './index.css'
 import 'virtual:windi.css'
+import '@fontsource/nunito-sans'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <React.StrictMode>
