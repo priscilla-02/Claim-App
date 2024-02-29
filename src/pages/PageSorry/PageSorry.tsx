@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
-import { ContinueButton, Title } from '../../styles/globalStyles'
-import { Container, Message, MessageBox } from './PageSorryStyles'
+import { Container, ContinueButton, Title } from '../../styles/globalStyles'
+import { Message, MessageBox, SorryHeader } from './PageSorryStyles'
 
 function PageSorry() {
     const navigate = useNavigate()
@@ -11,7 +11,7 @@ function PageSorry() {
 
     return (
         <Container>
-            <Title>We’re sorry about that!</Title>
+            <SorryHeader>We’re sorry about that!</SorryHeader>
             <MessageBox>
                 <Message>
                     Based on your given answers, it looks like you won’t qualify

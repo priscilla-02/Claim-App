@@ -1,12 +1,9 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-`
+interface PlaceholderProps {
+    src: string
+    alt: string
+}
 
 export const SignatureContainer = styled.div`
     display: flex;
@@ -15,6 +12,7 @@ export const SignatureContainer = styled.div`
     align-items: center;
     width: 332px;
     height: 240px;
+    margin-top: 20px;
 `
 
 export const SignatureHeader = styled.div`
@@ -24,7 +22,7 @@ export const SignatureHeader = styled.div`
     align-items: center;
     background-color: #0095ca;
     color: white;
-    font-family: RN House Sans;
+    font-family: 'RN House Sans W01 Regular';
     font-size: 14px;
     font-weight: 700;
     line-height: 17px;
@@ -42,25 +40,28 @@ export const SignaturePad = styled.div`
     border-bottom: 1px solid #1c1c1c;
     border-left: 1px solid #1c1c1c;
     border-right: 1px solid #1c1c1c;
+    cursor: pointer;
 `
 export const CanvasOverlay = styled.div`
     position: relative;
 `
 
-export const CanvasPlaceholder = styled.div`
+export const CanvasPlaceholder = styled.img<PlaceholderProps>`
     position: absolute;
     top: 35%;
-    left: 30%;
+    left: 28%;
     color: #c4c4c4;
     font-size: 30px;
+    z-index: -1;
 `
 
 export const SignaturePreview = styled.h1`
     color: #172c3b;
-    font-family: RN House Sans;
+    font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 400;
     text-align: center;
+    margin-top: 40px;
 `
 
 export const ReviewText = styled.h1`
@@ -71,7 +72,7 @@ export const ReviewText = styled.h1`
     letter-spacing: 0em;
     text-align: center;
     color: #254358;
-    padding-top: 20px;
+    padding-top: 40px;
 `
 export const ReviewTextSpan = styled.span`
     font-family: Nunito Sans;

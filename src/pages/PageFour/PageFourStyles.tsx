@@ -20,14 +20,11 @@ interface SelectOptionsProps {
     children?: React.ReactNode
 }
 
-export const Container = styled.div`
+export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-`
-export const TitleBox = styled.div`
-    width: 90%;
 `
 
 export const InputContainer = styled.div`
@@ -45,11 +42,6 @@ export const Text = styled.h1`
     line-height: 19px;
     letter-spacing: 0em;
     text-align: center;
-    margin-bottom: 8px;
-`
-
-export const TextBox = styled.div`
-    margin: 8px;
 `
 
 export const MaidenNameBox = styled.div`
@@ -70,7 +62,7 @@ export const DropdownSelectTitle = styled.select<TitleBoxProps>`
     align-items: center;
     text-align: center;
     color: #172c3b;
-    margin-left: 25%;
+    margin-right: 34%;
 `
 
 export const SelectOptions = styled.option<SelectOptionsProps>`
@@ -83,6 +75,8 @@ export const FormDOB = styled.div`
     justify-content: center;
     align-items: center;
     gap: 7px;
+    padding-top: 12px;
+    padding-bottom: 16px;
 `
 
 export const DropdownSelectDOB = styled.select<DobBoxProps>`

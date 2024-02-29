@@ -11,6 +11,7 @@ import {
     Title,
     MessageInfoContainer,
     MessageInfoText,
+    Container,
 } from '../../styles/globalStyles'
 import {
     PostCodeConatiner,
@@ -20,6 +21,7 @@ import {
     PreviousAddressBox,
     PreviousAddress,
     AddButton,
+    PreviousAddressText,
 } from './PageThreeStyles'
 
 function PageThree() {
@@ -92,7 +94,7 @@ function PageThree() {
     }
 
     return (
-        <>
+        <Container>
             <Header>That's great! Now please could you enter this in…</Header>
             <Title>Please enter your postcode in the box below</Title>
             <MessageInfoContainer>
@@ -150,11 +152,11 @@ function PageThree() {
                     </ContinueButton>
                     <PreviousAddressBox>
                         <PreviousAddress>Previous address</PreviousAddress>
-                        <MessageInfoText>
+                        <PreviousAddressText>
                             Please enter any previous addresses you might have
                             lived at when you originally took out the credit (if
                             different from the address above)
-                        </MessageInfoText>
+                        </PreviousAddressText>
                     </PreviousAddressBox>
                     <AddButton onClick={() => handleAddAddress()}>
                         Add Address
@@ -181,7 +183,7 @@ function PageThree() {
                     </SearchButton>
                 </PostCodeConatiner>
             )}
-        </>
+        </Container>
     )
 }
 export default PageThree

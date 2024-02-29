@@ -5,13 +5,13 @@ import { useNavigate } from 'react-router-dom'
 import { open, close } from '../../reducer/PopupSlice'
 import { UserTitleOptions } from '../../utils/constants'
 import {
+    Container,
     ContinueButton,
     Header,
     InputBox,
     Title,
 } from '../../styles/globalStyles'
 import {
-    Container,
     DropdownSelectDOB,
     DropdownSelectTitle,
     FormDOB,
@@ -19,8 +19,7 @@ import {
     MaidenNameBox,
     SelectOptions,
     Text,
-    TextBox,
-    TitleBox,
+    Wrapper,
 } from './PageFourStyles'
 
 function PageFour() {
@@ -112,18 +111,17 @@ function PageFour() {
     }
 
     return (
-        <>
-            <Container>
+        <Container>
+            <Wrapper>
                 <Header>
                     Good news! It looks like you might have a claim!
                 </Header>
-                <TitleBox>
-                    <Title>
-                        In order to proceed with your claim, please enter your
-                        details below:
-                    </Title>
-                </TitleBox>
-            </Container>
+                <Title>
+                    In order to proceed with your claim, please enter your
+                    details below:
+                </Title>
+            </Wrapper>
+
             <DropdownSelectTitle
                 id="title"
                 value={selectedTitle}
@@ -174,78 +172,76 @@ function PageFour() {
                         })
                     }
                 ></InputBox>
-                <TextBox>
-                    <Text>Madien/ Previous Names(s)</Text>
-                    <MaidenNameBox>
-                        <InputBox
-                            key="maidenName"
-                            type="text"
-                            id="maidenName"
-                            name="maidenName"
-                            placeholder={nameLineObject['maidenName']}
-                            value={userLocalState.maidenName}
-                            onChange={(e) =>
-                                setUserLocalState({
-                                    ...userLocalState,
-                                    maidenName: e.target.value,
-                                })
-                            }
-                        ></InputBox>
-                    </MaidenNameBox>
-                </TextBox>
 
-                <TextBox>
-                    <Text>Date of Birth</Text>
-                    <FormDOB>
-                        <DropdownSelectDOB
-                            id="day"
-                            value={selectedDay}
-                            onChange={(e) => {
-                                setSelectedDay(e.target.value)
-                            }}
-                        >
-                            <option value="">DD</option>
-                            {[...Array(31).keys()].map((day) => (
-                                <option key={day + 1} value={day + 1}>
-                                    {day + 1}
-                                </option>
-                            ))}
-                        </DropdownSelectDOB>
+                <Text>Madien/ Previous Names(s)</Text>
+                <MaidenNameBox>
+                    <InputBox
+                        key="maidenName"
+                        type="text"
+                        id="maidenName"
+                        name="maidenName"
+                        placeholder={nameLineObject['maidenName']}
+                        value={userLocalState.maidenName}
+                        onChange={(e) =>
+                            setUserLocalState({
+                                ...userLocalState,
+                                maidenName: e.target.value,
+                            })
+                        }
+                    ></InputBox>
+                </MaidenNameBox>
 
-                        <DropdownSelectDOB
-                            id="month"
-                            value={selectedMonth}
-                            onChange={(e) => {
-                                setSelectedMonth(e.target.value)
-                            }}
-                        >
-                            <option value="">MM</option>
-                            {[...Array(12).keys()].map((month) => (
-                                <option key={month + 1} value={month + 1}>
-                                    {month + 1}
-                                </option>
-                            ))}
-                        </DropdownSelectDOB>
+                <Text>Date of Birth</Text>
+                <FormDOB>
+                    <DropdownSelectDOB
+                        id="day"
+                        value={selectedDay}
+                        onChange={(e) => {
+                            setSelectedDay(e.target.value)
+                        }}
+                    >
+                        <option value="">DD</option>
+                        {[...Array(31).keys()].map((day) => (
+                            <option key={day + 1} value={day + 1}>
+                                {day + 1}
+                            </option>
+                        ))}
+                    </DropdownSelectDOB>
 
-                        <DropdownSelectDOB
-                            id="year"
-                            value={selectedYear}
-                            onChange={(e) => {
-                                setSelectedYear(e.target.value)
-                            }}
-                        >
-                            <option value="">YYYY</option>
-                            {[...Array(100).keys()].map((year) => (
-                                <option key={1924 + year} value={1924 + year}>
-                                    {1924 + year}
-                                </option>
-                            ))}
-                        </DropdownSelectDOB>
-                    </FormDOB>
-                </TextBox>
+                    <DropdownSelectDOB
+                        id="month"
+                        value={selectedMonth}
+                        onChange={(e) => {
+                            setSelectedMonth(e.target.value)
+                        }}
+                    >
+                        <option value="">MM</option>
+                        {[...Array(12).keys()].map((month) => (
+                            <option key={month + 1} value={month + 1}>
+                                {month + 1}
+                            </option>
+                        ))}
+                    </DropdownSelectDOB>
+
+                    <DropdownSelectDOB
+                        id="year"
+                        value={selectedYear}
+                        onChange={(e) => {
+                            setSelectedYear(e.target.value)
+                        }}
+                    >
+                        <option value="">YYYY</option>
+                        {[...Array(100).keys()].map((year) => (
+                            <option key={1924 + year} value={1924 + year}>
+                                {1924 + year}
+                            </option>
+                        ))}
+                    </DropdownSelectDOB>
+                </FormDOB>
+
                 <ContinueButton onClick={handleSubmit}>Continue</ContinueButton>
             </InputContainer>
-        </>
+        </Container>
     )
 }
 

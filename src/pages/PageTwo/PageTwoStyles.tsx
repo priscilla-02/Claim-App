@@ -6,6 +6,12 @@ interface CircleSelectionProps {
     alt: string
 }
 
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
 export const SelectionsContainer = styled.div`
     display: flex;
     flex-direction: column;
@@ -20,14 +26,13 @@ export const Selections = styled.button<
     font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 600;
-    padding: 12px, 16px;
     width: 300px;
     height: 39px;
     color: ${(props) => (props.colourChange ? '#21d63e' : '#172C3B')};
     border: 1px solid #172c3b;
     border-radius: 20px;
     cursor: pointer;
-    margin: 15px;
+    margin: 6px;
     display: flex;
     align-items: center;
     background-color: #f6f6f6;
@@ -36,5 +41,5 @@ export const Selections = styled.button<
 `
 
 export const CircleSelection = styled.img<CircleSelectionProps>`
-    margin-left: 20px;
+    margin-left: 10px;
 `

@@ -1,17 +1,6 @@
 import styled, { ThemedStyledProps } from 'styled-components'
 import { ButtonHTMLAttributes } from 'react'
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 20px;
-`
-
-export const TitleBox = styled.div`
-    width: 90%;
-`
-
 export const Button = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any> & {
         colour: boolean

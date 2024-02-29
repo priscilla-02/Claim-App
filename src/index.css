@@ -3,3 +3,18 @@
     margin: 0 auto;
     text-align: center;
 }
+
+@font-face {
+    font-family: 'RN House Sans W01 Regular';
+    src: url('https://db.onlinewebfonts.com/t/1db6e03026d3742e6cd094584490313b.eot');
+    src: url('https://db.onlinewebfonts.com/t/1db6e03026d3742e6cd094584490313b.eot?#iefix')
+            format('embedded-opentype'),
+        url('https://db.onlinewebfonts.com/t/1db6e03026d3742e6cd094584490313b.woff2')
+            format('woff2'),
+        url('https://db.onlinewebfonts.com/t/1db6e03026d3742e6cd094584490313b.woff')
+            format('woff'),
+        url('https://db.onlinewebfonts.com/t/1db6e03026d3742e6cd094584490313b.ttf')
+            format('truetype'),
+        url('https://db.onlinewebfonts.com/t/1db6e03026d3742e6cd094584490313b.svg#RN House Sans W01 Regular')
+            format('svg');
+}

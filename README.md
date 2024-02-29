@@ -1,6 +1,6 @@
 ## Welcome 👋
 
-This mobile screen web application for Claims utilizes React for a seamless and responsive user interface, TypeScript for enhanced code quality, Styled Components for customizable styling, and Redux for efficient state management.
+This mobile screen (set to 600px) web application for Claims utilizes React for a seamless and responsive user interface, TypeScript for enhanced code quality, Styled Components for customizable styling, and Redux for efficient state management.
 
 ## Dependencies:
 

@@ -5,6 +5,7 @@ import { RootState } from '../../store/index'
 import { setEmail } from '../../reducer/UserSlice'
 import { open, close } from '../../reducer/PopupSlice'
 import {
+    Container,
     ContinueButton,
     Header,
     InputBox,
@@ -12,7 +13,6 @@ import {
     MessageInfoText,
     Title,
 } from '../../styles/globalStyles'
-import { Container, TitleBox } from './PageFiveStyles'
 
 function PageFive() {
     const dispatch = useDispatch()
@@ -37,39 +37,35 @@ function PageFive() {
     }
 
     return (
-        <>
-            <Container>
-                <Header>
-                    Thanks for that, {firstNameState}! You’re almost done…
-                </Header>
-                <TitleBox>
-                    <Title>
-                        Please enter your email address in the box below
-                    </Title>
-                </TitleBox>
-                <MessageInfoContainer>
-                    <img src="/pageThree-message.svg" alt="Message Icon" />
-                    <MessageInfoText>
-                        We'll use this to provide you with updates concerning
-                        your claim.
-                    </MessageInfoText>
-                </MessageInfoContainer>
+        <Container>
+            <Header>
+                Thanks for that, {firstNameState}! You’re almost done…
+            </Header>
 
-                <InputBox
-                    key=""
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="Your Email Address"
-                    value={emailInput}
-                    onChange={(e) => setEmailInput(e.target.value)}
-                ></InputBox>
-            </Container>
+            <Title>Please enter your email address in the box below</Title>
+
+            <MessageInfoContainer>
+                <img src="/pageThree-message.svg" alt="Message Icon" />
+                <MessageInfoText>
+                    We'll use this to provide you with updates concerning your
+                    claim.
+                </MessageInfoText>
+            </MessageInfoContainer>
+
+            <InputBox
+                key=""
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email Address"
+                value={emailInput}
+                onChange={(e) => setEmailInput(e.target.value)}
+            ></InputBox>
 
             <ContinueButton onClick={() => handleEmailSumbit()}>
                 Continue
             </ContinueButton>
-        </>
+        </Container>
     )
 }
 

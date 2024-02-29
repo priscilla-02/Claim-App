@@ -6,6 +6,7 @@ import { BanksAndLenderArray } from '../../utils/constants'
 import { ContinueButton, Header, Title } from '../../styles/globalStyles'
 import {
     CircleSelection,
+    Container,
     Selections,
     SelectionsContainer,
 } from './PageTwoStyles'
@@ -30,7 +31,7 @@ function PageTwo() {
     }
 
     return (
-        <>
+        <Container>
             <Header>Thanks for that, now...</Header>
             <Title>
                 Please can you tell us which bank(s) or lenders you have used?
@@ -63,7 +64,7 @@ function PageTwo() {
                     Continue
                 </ContinueButton>
             </Link>
-        </>
+        </Container>
     )
 }
 

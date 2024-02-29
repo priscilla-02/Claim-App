@@ -5,8 +5,8 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import { Header, Title } from '../../styles/globalStyles'
-import { Button, Container, TitleBox } from './PageEightStyles'
+import { Container, Header, Title } from '../../styles/globalStyles'
+import { Button } from './PageEightStyles'
 
 function PageEight() {
     const navigate = useNavigate()
@@ -44,26 +44,22 @@ function PageEight() {
     }
 
     return (
-        <>
-            <Container>
-                <Header>
-                    We just need a couple more things from you, {firstNameState}
-                    ...
-                </Header>
-                <TitleBox>
-                    <Title>
-                        Have you ever been in or are proposed to be in an IVA or
-                        declared bankrupt?*
-                    </Title>
-                </TitleBox>
-                <Button colour={true} onClick={() => handleSumbit(true)}>
-                    Yes
-                </Button>
-                <Button colour={false} onClick={() => handleSumbit(false)}>
-                    No
-                </Button>
-            </Container>
-        </>
+        <Container>
+            <Header>
+                We just need a couple more things from you, {firstNameState}
+                ...
+            </Header>
+            <Title>
+                Have you ever been in or are proposed to be in an IVA or
+                declared bankrupt?*
+            </Title>
+            <Button colour={true} onClick={() => handleSumbit(true)}>
+                Yes
+            </Button>
+            <Button colour={false} onClick={() => handleSumbit(false)}>
+                No
+            </Button>
+        </Container>
     )
 }
 

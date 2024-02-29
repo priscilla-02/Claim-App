@@ -20,12 +20,12 @@ export const PostCodeConatiner = styled.div`
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin: 20px 0;
 `
 export const PostcodeLabel = styled.input<InputBoxProps>`
     border: 0.6px solid #254358;
     width: 228px;
     height: 35px;
-    margin: 16px;
     padding-left: 16px;
     border-radius: 10px;
     background-color: #f6f6f6;
@@ -37,6 +37,9 @@ export const PostcodeLabel = styled.input<InputBoxProps>`
     font-size: 14px;
     font-weight: 400;
     line-height: 19.1px;
+    ::placeholder {
+        color: #172c3b;
+    }
 `
 export const SearchButton = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any>
@@ -72,6 +75,17 @@ export const PreviousAddress = styled.h1`
     line-height: 27.28px;
     text-align: left;
     color: #172c3b;
+    margin: 0;
+`
+
+export const PreviousAddressText = styled.h1`
+    font-family: Nunito Sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19.1px;
+    color: #172c3b;
+    letter-spacing: 0em;
+    text-align: left;
 `
 
 export const AddButton = styled.button<
@@ -82,7 +96,6 @@ export const AddButton = styled.button<
     font-weight: 700;
     line-height: 19px;
     letter-spacing: 0em;
-    padding: 20px, 120px;
     width: 275px;
     height: 50px;
     background-color: #0095ca;
@@ -90,5 +103,5 @@ export const AddButton = styled.button<
     border: 1px solid #172c3b;
     border-radius: 20px;
     cursor: pointer;
-    margin-top: 25px;
+    margin-top: 5px;
 `

@@ -11,6 +11,12 @@ interface InputBoxProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
 export const ExpertLogo = styled.div`
     display: flex;
     align-items: center;
@@ -26,7 +32,7 @@ export const TextBox = styled.div`
 export const Expert = styled.h1`
     display: flex;
     text-align: left;
-    font-weight: bolder;
+    font-weight: 700;
     font-size: 25px;
     height: 35px;
     margin: 0;
@@ -42,7 +48,8 @@ export const Header = styled.header`
     line-height: 21.82px;
     text-align: center;
     color: #21d63e;
-    margin-top: 16px;
+    margin-top: 30px;
+    width: 100%;
 `
 export const Title = styled.h1`
     font-family: Nunito Sans;
@@ -51,7 +58,9 @@ export const Title = styled.h1`
     line-height: 27.28px;
     text-align: center;
     color: #172c3b;
-    margin: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    width: 60%;
 `
 
 export const InputBox = styled.input<InputBoxProps>`
@@ -69,16 +78,21 @@ export const InputBox = styled.input<InputBoxProps>`
     font-size: 14px;
     font-weight: 400;
     line-height: 19.1px;
+    ::placeholder {
+        color: #172c3b;
+    }
 `
 
 export const MessageInfoContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f6f6f6;
+    // background-color: #f6f6f6;
+    background-color: red;
     gap: 5px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 0 20px 0 10px;
+    border-radius: 10px;
+    width: 60%;
 `
 
 export const MessageInfoText = styled.h1`
@@ -86,9 +100,10 @@ export const MessageInfoText = styled.h1`
     font-size: 14px;
     font-weight: 400;
     line-height: 19.1px;
-    color: #172c3b;
+    color: #254358;
     letter-spacing: 0em;
     text-align: left;
+    margin-left: 10px;
 `
 
 export const ContinueButton = styled.button<

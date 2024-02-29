@@ -1,13 +1,6 @@
 import styled, { ThemedStyledProps } from 'styled-components'
 import { ButtonHTMLAttributes } from 'react'
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 20px;
-`
-
 export const Button = styled.button<
     ThemedStyledProps<ButtonHTMLAttributes<HTMLButtonElement>, any> & {
         colour: boolean
@@ -22,5 +15,5 @@ export const Button = styled.button<
     border: 1px solid #172c3b;
     border-radius: 20px;
     cursor: pointer;
-    margin: 16px;
+    margin: 8px;
 `

@@ -46,13 +46,14 @@ export const BenefitBox = styled.div<BenefitBoxProps>`
 export const BenefitPoint = styled.div`
     color: #172c3b;
     margin: 14px 14px 19px;
+    font-family: Nunito Sans;
+    font-size: 18px;
 `
 
 export const LogoBox = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // border-bottom: 1px solid #3d3f58;
     margin-left: 45px;
     margin-right: 45px;
 `
@@ -74,22 +75,27 @@ export const SecureTextBox = styled.div`
     font-family: Nunito Sans;
 `
 
+export const LockIcon = styled.img<IconProps>`
+    width: 22px;
+`
+
 export const SecureTextTopLine = styled.h1`
-    font-family: Montserrat;
-    font-size: 8.69px;
+    font-family: Nunito Sans;
+    font-size: 12px;
     font-weight: 600;
-    line-height: 11.86px;
+    line-height: 8px;
     letter-spacing: 0em;
     text-align: left;
     margin: 0;
 `
 export const SecureTextBottomLine = styled.h1`
     font-family: Nunito Sans;
-    font-size: 2.94px;
+    font-size: 3.5px;
     font-weight: 600;
-    line-height: 3.39px;
+    line-height: 1px;
     letter-spacing: 0em;
     text-align: left;
+    margin-bottom: 3px;
 `
 
 export const TopTextBox = styled.div`
@@ -97,15 +103,15 @@ export const TopTextBox = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin: 20px 50px;
+    margin: 20px 50px 10px;
     gap: 25px;
-    border-top: 1px solid #3d3f58;
+    border-top: 2px solid #3d3f58;
 `
 export const CompanyInfo = styled.div`
     font-family: Nunito Sans;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 300;
-    line-height: 13px;
+    line-height: 20px;
     letter-spacing: 0em;
     text-align: left;
     margin-top: 25px;
@@ -113,9 +119,9 @@ export const CompanyInfo = styled.div`
 
 export const CopyrightText = styled.h2`
     font-family: Nunito Sans;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: 300;
-    line-height: 11px;
+    line-height: 12px;
     letter-spacing: 0em;
     text-align: left;
 `
@@ -130,8 +136,8 @@ export const BottomTextBox = styled.div`
 
 export const PrivacyText = styled.h2`
     font-family: Nunito Sans;
-    font-size: 8px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 300;
     line-height: 10.91px;
     letter-spacing: 0em;
     text-align: left;
@@ -139,24 +145,24 @@ export const PrivacyText = styled.h2`
 
 export const DevelopedText = styled.h2`
     font-family: Nunito Sans;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 300;
     line-height: 2.6px;
     letter-spacing: 0.04em;
     text-align: left;
     margin-top: 30px;
 `
+
 export const DevelopedBox = styled.div`
     display: flex;
     gap: 5px;
 `
+
 export const CompanyLogo = styled.img<LogoBoxProps>`
-    margin-top: 20px;
-`
-export const BadgeIcon = styled.img<IconProps>`
-    width: 120px;
+    margin-top: 15px;
+    width: 110px;
 `
 
-export const LockIcon = styled.img<IconProps>`
-    width: 22px;
+export const BadgeIcon = styled.img<IconProps>`
+    width: 140px;
 `

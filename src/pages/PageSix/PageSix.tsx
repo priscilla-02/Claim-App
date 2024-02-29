@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { setPhoneNo } from '../../reducer/UserSlice'
 import { open, close } from '../../reducer/PopupSlice'
 import {
+    Container,
     ContinueButton,
     Header,
     InputBox,
@@ -12,7 +13,6 @@ import {
     MessageInfoText,
     Title,
 } from '../../styles/globalStyles'
-import { Container } from './PageSixStyles'
 
 function PageSix() {
     const dispatch = useDispatch()
@@ -39,36 +39,35 @@ function PageSix() {
     }
 
     return (
-        <>
-            <Container>
-                <Header>
-                    We just need a couple more things from you, {firstNameState}
-                    ...
-                </Header>
-                <Title>Please enter your phone number in the box below</Title>
-                <MessageInfoContainer>
-                    <img src="/pageThree-message.svg" alt="Message Icon" />
-                    <MessageInfoText>
-                        We'll use this to provide you with updates concerning
-                        your claim.
-                    </MessageInfoText>
-                </MessageInfoContainer>
+        <Container>
+            <Header>
+                We just need a couple more things from you, {firstNameState}
+                ...
+            </Header>
+            <Title>Please enter your phone number in the box below</Title>
 
-                <InputBox
-                    key=""
-                    type="tel"
-                    id="phoneNo"
-                    name="phoneNo"
-                    placeholder="Your Phone Number"
-                    value={phoneNoInput}
-                    onChange={(e) => setphoneNoInput(e.target.value)}
-                ></InputBox>
-            </Container>
+            <MessageInfoContainer>
+                <img src="/pageThree-message.svg" alt="Message Icon" />
+                <MessageInfoText>
+                    We'll use this to provide you with updates concerning your
+                    claim.
+                </MessageInfoText>
+            </MessageInfoContainer>
+
+            <InputBox
+                key=""
+                type="tel"
+                id="phoneNo"
+                name="phoneNo"
+                placeholder="Your Phone Number"
+                value={phoneNoInput}
+                onChange={(e) => setphoneNoInput(e.target.value)}
+            ></InputBox>
 
             <ContinueButton onClick={() => handlePhoneNoSumbit()}>
                 Continue
             </ContinueButton>
-        </>
+        </Container>
     )
 }
 

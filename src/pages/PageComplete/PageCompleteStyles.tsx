@@ -1,20 +1,6 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-`
-
-export const MessageBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin: 32px 0;
-    width: 80%;
-`
-export const Message = styled.div`
+export const MessageTopText = styled.div`
     font-family: Nunito Sans;
     font-size: 14px;
     font-weight: 400;
@@ -22,4 +8,6 @@ export const Message = styled.div`
     letter-spacing: 0em;
     text-align: center;
     color: #172c3b;
+    width: 60%;
+    padding-top: 20px;
 `

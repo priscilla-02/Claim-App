@@ -5,11 +5,15 @@ import { useState, useRef } from 'react'
 import { setSignature } from '../../reducer/UserSlice'
 import { open, close } from '../../reducer/PopupSlice'
 import SignatureCanvas from 'react-signature-canvas'
-import { ContinueButton, Header, Title } from '../../styles/globalStyles'
+import {
+    Container,
+    ContinueButton,
+    Header,
+    Title,
+} from '../../styles/globalStyles'
 import {
     CanvasOverlay,
     CanvasPlaceholder,
-    Container,
     DisclaimerText,
     DisclaimerTextSpan,
     ReviewText,
@@ -69,7 +73,10 @@ function PageSeven() {
                 <SignaturePad>
                     <CanvasOverlay>
                         {!isDrawing && (
-                            <CanvasPlaceholder> E-Signature</CanvasPlaceholder>
+                            <CanvasPlaceholder
+                                src="../../../public/signature.svg"
+                                alt="E-Signature Placeholder"
+                            />
                         )}
                         <SignatureCanvas
                             penColor="black"

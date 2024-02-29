@@ -1,9 +1,14 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+export const SorryHeader = styled.h1`
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 27.28px;
+    text-align: center;
+    color: #172c3b;
+    margin-top: 30px;
+    width: 60%;
 `
 
 export const MessageBox = styled.div`
@@ -11,7 +16,7 @@ export const MessageBox = styled.div`
     flex-direction: column;
     gap: 8px;
     margin: 32px 0;
-    width: 80%;
+    width: 70%;
 `
 export const Message = styled.div`
     font-family: Nunito Sans;
