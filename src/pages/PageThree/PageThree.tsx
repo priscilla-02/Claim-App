@@ -103,7 +103,7 @@ function PageThree() {
                     {addressLocalState.map((address, index) => (
                         <div key={index}>
                             {addressLocalState.length > 1 && (
-                                <div>Address number {index + 1}</div>
+                                <Title>Address {index + 1}</Title>
                             )}
                             {FullAddressDetails.map(
                                 (line: string, idx: number) => (

@@ -62,6 +62,7 @@ export const PreviousAddressBox = styled.div`
     gap: 10px;
     width: 257px;
     height: 123px;
+    margin: 25px;
 `
 
 export const PreviousAddress = styled.h1`
@@ -71,7 +72,6 @@ export const PreviousAddress = styled.h1`
     line-height: 27.28px;
     text-align: left;
     color: #172c3b;
-    margin: 16px;
 `
 
 export const AddButton = styled.button<
