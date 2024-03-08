@@ -49,7 +49,7 @@ export const InputBox = styled.input<InputBoxProps>`
     border: 0.6px solid #254358;
     width: 300px;
     height: 35px;
-    margin: 16px;
+    margin: 16px 0px;
     border-radius: 10px;
     background-color: #f6f6f6;
     display: flex;

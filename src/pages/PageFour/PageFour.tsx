@@ -124,28 +124,27 @@ function PageFour() {
                 </Title>
             </Wrapper>
 
-            <DropdownSelectTitle
-                id="title"
-                value={selectedTitle}
-                onChange={(e) => {
-                    setSelectedTitle(e.target.value)
-                    setUserLocalState({
-                        ...userLocalState,
-                        title: e.target.value,
-                    })
-                }}
-            >
-                <SelectOptions key="" value="">
-                    {nameLineObject['title']}
-                </SelectOptions>
-                {UserTitleOptions.map((title) => (
-                    <SelectOptions key={title} value={title}>
-                        {title}
-                    </SelectOptions>
-                ))}
-            </DropdownSelectTitle>
-
             <InputContainer>
+                <DropdownSelectTitle
+                    id="title"
+                    value={selectedTitle}
+                    onChange={(e) => {
+                        setSelectedTitle(e.target.value)
+                        setUserLocalState({
+                            ...userLocalState,
+                            title: e.target.value,
+                        })
+                    }}
+                >
+                    <SelectOptions key="" value="">
+                        {nameLineObject['title']}
+                    </SelectOptions>
+                    {UserTitleOptions.map((title) => (
+                        <SelectOptions key={title} value={title}>
+                            {title}
+                        </SelectOptions>
+                    ))}
+                </DropdownSelectTitle>
                 <InputBox
                     key="firstName"
                     type="text"

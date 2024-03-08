@@ -58,11 +58,12 @@ export const DropdownSelectTitle = styled.select<TitleBoxProps>`
     width: 95px;
     height: 35px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
     color: #172c3b;
-    margin-right: 34%;
+    margin-right: auto;
+    // margin: 16px;
 `
 
 export const SelectOptions = styled.option<SelectOptionsProps>`
