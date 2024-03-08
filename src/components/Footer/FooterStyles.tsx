@@ -5,11 +5,6 @@ interface BenefitBoxProps {
     children?: React.ReactNode
 }
 
-interface LogoBoxProps {
-    src: string
-    alt: string
-}
-
 interface IconProps {
     src: string
     alt: string
@@ -66,38 +61,6 @@ export const SecureLogo = styled.div`
     margin: 0 20px;
 `
 
-export const SecureTextBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    border-bottom: solid 1px #ffffff;
-    font-size: 20px;
-    font-family: Nunito Sans;
-`
-
-export const LockIcon = styled.img<IconProps>`
-    width: 22px;
-`
-
-export const SecureTextTopLine = styled.h1`
-    font-family: Nunito Sans;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 8px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin: 0;
-`
-export const SecureTextBottomLine = styled.h1`
-    font-family: Nunito Sans;
-    font-size: 3.5px;
-    font-weight: 600;
-    line-height: 1px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-bottom: 3px;
-`
-
 export const TopTextBox = styled.div`
     font-family: Nunito Sans;
     display: flex;
@@ -143,26 +106,12 @@ export const PrivacyText = styled.h2`
     text-align: left;
 `
 
-export const DevelopedText = styled.h2`
-    font-family: Nunito Sans;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 2.6px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    margin-top: 30px;
-`
-
 export const DevelopedBox = styled.div`
     display: flex;
     gap: 5px;
-`
-
-export const CompanyLogo = styled.img<LogoBoxProps>`
-    margin-top: 15px;
-    width: 110px;
+    margin-top: 30px;
 `
 
 export const BadgeIcon = styled.img<IconProps>`
-    width: 140px;
+    width: 110px;
 `

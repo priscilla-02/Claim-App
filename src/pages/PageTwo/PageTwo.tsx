@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
-import { setBankUsed } from '../../reducer/UserSlice'
+import { setBankUsed } from '../../store/reducer/UserSlice'
 import { BanksAndLenderArray } from '../../utils/constants'
 import { ContinueButton, Header, Title } from '../../styles/globalStyles'
 import {

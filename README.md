@@ -1,6 +1,10 @@
-## Welcome 👋
+# Claims Application 📋
 
-This mobile screen (set to 600px) web application for Claims utilizes React for a seamless and responsive user interface, TypeScript for enhanced code quality, Styled Components for customizable styling, and Redux for efficient state management.
+## Welcome 👋🏼
+
+This mobile screen (set to 600px) web application is a mock-up Claims Application that utilizes React for a seamless and responsive user interface, TypeScript for enhanced code quality, Redux for efficient state management, and Styled Components for customizable styling.
+
+Hosted version: https://claim-application.netlify.app/
 
 ## Dependencies:
 

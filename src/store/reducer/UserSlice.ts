@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
-export interface UserSubmissionState {
+
+interface UserSubmissionState {
     creditUse: boolean
     bankUsed: string[]
     address: IAddress[]

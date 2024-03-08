@@ -1,8 +1,8 @@
 import { useNavigate } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { IAddress, setAddress } from '../../reducer/UserSlice'
-import { open, close } from '../../reducer/PopupSlice'
+import { IAddress, setAddress } from '../../store/reducer/UserSlice'
+import { open, close } from '../../store/reducer/PopupSlice'
 import { FullAddressDetails } from '../../utils/constants'
 import {
     ContinueButton,

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { setCreditUse } from '../../reducer/UserSlice'
+import { setCreditUse } from '../../store/reducer/UserSlice'
 import { Container, Header, Title } from '../../styles/globalStyles'
 import { Button } from './PageOneStyles'
 

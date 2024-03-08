@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'
 import { useState, useRef } from 'react'
-import { setSignature } from '../../reducer/UserSlice'
-import { open, close } from '../../reducer/PopupSlice'
+import { setSignature } from '../../store/reducer/UserSlice'
+import { open, close } from '../../store/reducer/PopupSlice'
 import SignatureCanvas from 'react-signature-canvas'
 import {
     Container,
@@ -74,7 +74,7 @@ function PageSeven() {
                     <CanvasOverlay>
                         {!isDrawing && (
                             <CanvasPlaceholder
-                                src="../../../public/signature.svg"
+                                src="/signature.svg"
                                 alt="E-Signature Placeholder"
                             />
                         )}

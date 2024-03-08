@@ -1,5 +1,4 @@
-margin: 0
-import React, { FC, ReactElement } from 'react'
+import { FC, ReactElement } from 'react'
 import {
     Container,
     GuaranteeBox,
@@ -8,27 +7,16 @@ import {
     TopTextBox,
     CopyrightText,
     SecureLogo,
-    SecureTextBox,
     LogoBox,
     BottomTextBox,
     BenefitPoint,
-    SecureTextTopLine,
-    SecureTextBottomLine,
     CompanyInfo,
     PrivacyText,
-    DevelopedText,
     DevelopedBox,
-    CompanyLogo,
     BadgeIcon,
-    LockIcon,
 } from './FooterStyles'
 import { FooterArray } from '../../utils/constants'
-import {
-    Expert,
-    ExpertLogo,
-    PlevinClaims,
-    TextBox,
-} from '../../styles/globalStyles'
+import { ExpertLogo } from '../../styles/globalStyles'
 export const Footer: FC = (): ReactElement => {
     return (
         <Container>
@@ -46,14 +34,13 @@ export const Footer: FC = (): ReactElement => {
             <Wrapper>
                 <LogoBox>
                     <ExpertLogo>
-                        <img src="/global-tick.svg" alt="Tick Icon" />
-                        <TextBox>
-                            <Expert>Expert</Expert>
-                            <PlevinClaims>PlevinClaims</PlevinClaims>
-                        </TextBox>
+                        <img
+                            src="/global-expert-group.svg"
+                            alt="Expert Plevin Claims Icon"
+                        />
                     </ExpertLogo>
                     <SecureLogo>
-                        <div>
+                        {/* <div>
                             <LockIcon src="/footer-lock.svg" alt="Lock Icon" />
                         </div>
                         <SecureTextBox>
@@ -61,7 +48,11 @@ export const Footer: FC = (): ReactElement => {
                             <SecureTextBottomLine>
                                 SSL ENCRYPTION
                             </SecureTextBottomLine>
-                        </SecureTextBox>
+                        </SecureTextBox> */}
+                        <img
+                            src="/footer-lock-group.svg"
+                            alt="Secure SSL Encryption Icon"
+                        />
                     </SecureLogo>
                 </LogoBox>
                 <TopTextBox>
@@ -82,12 +73,9 @@ export const Footer: FC = (): ReactElement => {
                     <div>
                         <PrivacyText>Privacy Policy</PrivacyText>
                         <DevelopedBox>
-                            <DevelopedText>
-                                Developed and marketed by
-                            </DevelopedText>
-                            <CompanyLogo
-                                src="/footer-main-logo.svg"
-                                alt="Main Logo"
+                            <img
+                                src="../../../public/footer-develop-group.svg"
+                                alt="Developed and Marketed by Opop Media"
                             />
                         </DevelopedBox>
                     </div>

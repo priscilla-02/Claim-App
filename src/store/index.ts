@@ -1,6 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import UserInfoReducer from '../reducer/UserSlice'
-import PopupReducer from '../reducer/PopupSlice'
+import UserInfoReducer from './reducer/UserSlice'
+import PopupReducer from './reducer/PopupSlice'
 
 const rootReducer = combineReducers({
     userInfo: UserInfoReducer,

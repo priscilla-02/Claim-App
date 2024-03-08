@@ -20,27 +20,9 @@ export const Container = styled.div`
 export const ExpertLogo = styled.div`
     display: flex;
     align-items: center;
-    text-align: left;
-    margin: 0 20px;
+    margin-left: 20px;
     color: #ffffff;
 `
-export const TextBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-`
-export const Expert = styled.h1`
-    display: flex;
-    text-align: left;
-    font-weight: 700;
-    font-size: 25px;
-    height: 35px;
-    margin: 0;
-`
-export const PlevinClaims = styled.div`
-    font-size: 14px;
-`
-
 export const Header = styled.header`
     font-family: Nunito Sans;
     font-weight: 700;

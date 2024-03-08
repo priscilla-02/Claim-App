@@ -1,8 +1,8 @@
-import { IUserinfo, setUserInfo } from '../../reducer/UserSlice'
+import { IUserinfo, setUserInfo } from '../../store/reducer/UserSlice'
 import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import { open, close } from '../../reducer/PopupSlice'
+import { open, close } from '../../store/reducer/PopupSlice'
 import { UserTitleOptions } from '../../utils/constants'
 import {
     Container,

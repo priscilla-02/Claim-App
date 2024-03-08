@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'
 import { useState } from 'react'
-import { setPhoneNo } from '../../reducer/UserSlice'
-import { open, close } from '../../reducer/PopupSlice'
+import { setPhoneNo } from '../../store/reducer/UserSlice'
+import { open, close } from '../../store/reducer/PopupSlice'
 import {
     Container,
     ContinueButton,

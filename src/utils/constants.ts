@@ -1,4 +1,4 @@
-import { IUserinfo } from '../reducer/UserSlice'
+import { IUserinfo } from '../store/reducer/UserSlice'
 
 export const FooterArray: string[] = [
     'Operating on a no-win, no-fee basis',

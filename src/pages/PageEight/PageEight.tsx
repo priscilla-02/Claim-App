@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux'
-import { open } from '../../reducer/PopupSlice'
-import { setIva } from '../../reducer/UserSlice'
+import { open } from '../../store/reducer/PopupSlice'
+import { setIva } from '../../store/reducer/UserSlice'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { useNavigate } from 'react-router-dom'

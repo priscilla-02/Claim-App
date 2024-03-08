@@ -2,7 +2,7 @@ import { FC, ReactElement, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../../store/index'
 import { CloseIcon, PopupComponent } from './PopupStyles'
-import { close } from '../../reducer/PopupSlice'
+import { close } from '../../store/reducer/PopupSlice'
 
 export const Popup: FC = (): ReactElement => {
     const popupState = useSelector((state: RootState) => state.popup)
