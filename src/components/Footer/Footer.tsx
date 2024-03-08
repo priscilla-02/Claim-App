@@ -74,7 +74,7 @@ export const Footer: FC = (): ReactElement => {
                         <PrivacyText>Privacy Policy</PrivacyText>
                         <DevelopedBox>
                             <img
-                                src="../../../public/footer-develop-group.svg"
+                                src="/footer-develop-group.svg"
                                 alt="Developed and Marketed by Opop Media"
                             />
                         </DevelopedBox>
