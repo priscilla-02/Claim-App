@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "types": ["vite/client", "node", "jest", "@testing-library/jest-dom"],
+        "types": ["vite/client", "node"],
         "target": "ESNext",
         "useDefineForClassFields": true,
         "lib": ["DOM", "DOM.Iterable", "ESNext"],
