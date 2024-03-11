@@ -17,12 +17,29 @@ export const Container = styled.div`
     align-items: center;
 `
 
-export const ExpertLogo = styled.div`
+export const ClaimsLogoBox = styled.div`
     display: flex;
     align-items: center;
-    margin-left: 20px;
+    margin-left: 30px;
+`
+
+export const ClaimsLogo = styled.div`
+    display: flex;
+    align-items: center;
     color: #ffffff;
 `
+
+export const ClaimsLogoText = styled.h1`
+    display: flex;
+    align-items: center;
+    font-family: Nunito Sans;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 10px;
+    color: #21d63e;
+    margin-left: 7px;
+`
+
 export const Header = styled.header`
     font-family: Nunito Sans;
     font-weight: 700;

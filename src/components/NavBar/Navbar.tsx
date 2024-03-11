@@ -1,16 +1,20 @@
 import { FC, ReactElement } from 'react'
-import { ExpertLogo } from '../../styles/globalStyles'
+import {
+    ClaimsLogo,
+    ClaimsLogoBox,
+    ClaimsLogoText,
+} from '../../styles/globalStyles'
 import { Container, LineThrough, RightLogosBox } from './NavBarStyles'
 
 const Navbar: FC = (): ReactElement => {
     return (
         <Container>
-            <ExpertLogo>
-                <img
-                    src="/global-expert-group.svg"
-                    alt="Expert Plevin Claims Icon"
-                />
-            </ExpertLogo>
+            <ClaimsLogoBox>
+                <ClaimsLogo>
+                    <img src="/footer-tick-stamp.svg" alt="Claims Icon" />
+                </ClaimsLogo>
+                <ClaimsLogoText>Claims</ClaimsLogoText>
+            </ClaimsLogoBox>
             <LineThrough></LineThrough>
             <RightLogosBox>
                 <img

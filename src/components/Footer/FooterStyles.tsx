@@ -49,7 +49,7 @@ export const LogoBox = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 45px;
+    margin-left: 35px;
     margin-right: 45px;
 `
 
@@ -70,15 +70,6 @@ export const TopTextBox = styled.div`
     gap: 25px;
     border-top: 2px solid #3d3f58;
 `
-export const CompanyInfo = styled.div`
-    font-family: Nunito Sans;
-    font-size: 12px;
-    font-weight: 300;
-    line-height: 20px;
-    letter-spacing: 0em;
-    text-align: left;
-    margin-top: 25px;
-`
 
 export const CopyrightText = styled.h2`
     font-family: Nunito Sans;
@@ -87,13 +78,16 @@ export const CopyrightText = styled.h2`
     line-height: 12px;
     letter-spacing: 0em;
     text-align: left;
+    margin-top: 20px;
+    margin-left: 15px;
 `
 
 export const BottomTextBox = styled.div`
     font-family: Nunito Sans;
     display: flex;
     text-align: left;
-    margin: 0px 50px;
+    margin: 10px 50px;
+
     justify-content: space-between;
 `
 
@@ -104,14 +98,22 @@ export const PrivacyText = styled.h2`
     line-height: 10.91px;
     letter-spacing: 0em;
     text-align: left;
+    margin-top: 25px;
+    margin-left: 15px;
 `
 
-export const DevelopedBox = styled.div`
+export const DevelopedBox = styled.h2`
+    font-family: Nunito Sans;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 10.91px;
     display: flex;
     gap: 5px;
     margin-top: 30px;
+    margin-left: 15px;
 `
 
 export const BadgeIcon = styled.img<IconProps>`
-    width: 110px;
+    padding-top: 20px;
+    margin-right: 15px;
 `

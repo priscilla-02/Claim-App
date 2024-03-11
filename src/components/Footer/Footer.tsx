@@ -10,13 +10,16 @@ import {
     LogoBox,
     BottomTextBox,
     BenefitPoint,
-    CompanyInfo,
     PrivacyText,
     DevelopedBox,
     BadgeIcon,
 } from './FooterStyles'
 import { FooterArray } from '../../utils/constants'
-import { ExpertLogo } from '../../styles/globalStyles'
+import {
+    ClaimsLogo,
+    ClaimsLogoBox,
+    ClaimsLogoText,
+} from '../../styles/globalStyles'
 export const Footer: FC = (): ReactElement => {
     return (
         <Container>
@@ -33,22 +36,17 @@ export const Footer: FC = (): ReactElement => {
             </GuaranteeBox>
             <Wrapper>
                 <LogoBox>
-                    <ExpertLogo>
-                        <img
-                            src="/global-expert-group.svg"
-                            alt="Expert Plevin Claims Icon"
-                        />
-                    </ExpertLogo>
+                    <ClaimsLogoBox>
+                        <ClaimsLogo>
+                            <img
+                                src="/footer-tick-stamp.svg"
+                                alt="Claims Icon"
+                            />
+                        </ClaimsLogo>
+                        <ClaimsLogoText>Claims</ClaimsLogoText>
+                    </ClaimsLogoBox>
+
                     <SecureLogo>
-                        {/* <div>
-                            <LockIcon src="/footer-lock.svg" alt="Lock Icon" />
-                        </div>
-                        <SecureTextBox>
-                            <SecureTextTopLine>SECURE</SecureTextTopLine>
-                            <SecureTextBottomLine>
-                                SSL ENCRYPTION
-                            </SecureTextBottomLine>
-                        </SecureTextBox> */}
                         <img
                             src="/footer-lock-group.svg"
                             alt="Secure SSL Encryption Icon"
@@ -56,28 +54,12 @@ export const Footer: FC = (): ReactElement => {
                     </SecureLogo>
                 </LogoBox>
                 <TopTextBox>
-                    <CompanyInfo>
-                        Expert Plevin Claims is a trading name of Veriform
-                        Limited, a company registered in England and Wales
-                        (registration number 07195400) whose registered office
-                        is 145/147 Hatfield Road, St. Albans, Hertfordshire AL1
-                        4JY. Veriform Limited is authorised and regulated by the
-                        Financial Conduct Authority (FCA) under registration
-                        number 690199.
-                    </CompanyInfo>
-                    <CopyrightText>
-                        © Copyright Veriform Limited 2023. All rights reserved.
-                    </CopyrightText>
+                    <CopyrightText>© Copyright</CopyrightText>
                 </TopTextBox>
                 <BottomTextBox>
                     <div>
                         <PrivacyText>Privacy Policy</PrivacyText>
-                        <DevelopedBox>
-                            <img
-                                src="/footer-develop-group.svg"
-                                alt="Developed and Marketed by Opop Media"
-                            />
-                        </DevelopedBox>
+                        <DevelopedBox>Developed by Priscilla Chan</DevelopedBox>
                     </div>
                     <BadgeIcon src="/footer-badge.svg" alt="Digital Badge" />
                 </BottomTextBox>
