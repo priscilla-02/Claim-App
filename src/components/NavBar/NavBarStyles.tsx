@@ -9,7 +9,7 @@ export const Container = styled.nav`
     justify-content: flex-start;
 `
 export const LineThrough = styled.div`
-    width: 50%;
+    width: min(346px, calc(100vw - 300px));
     height: 1px;
     text-align: center;
     margin: auto 10px;
